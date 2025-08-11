@@ -1,0 +1,11 @@
+{% macro select_field(name, label='', options=[]) %}
+<div>
+    <label class="block mb-1 text-gray-700 font-semibold">{{ label }}</label>
+    <select name="{{ name }}"
+        class="border-1 border-gray-400 w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        {% for option in options %}
+        <option value="{{ option['id'] }}">{{ option['value'] }}</option>
+        {% endfor %}
+    </select>
+</div>
+{% endmacro %}

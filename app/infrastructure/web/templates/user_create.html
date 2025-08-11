@@ -1,0 +1,42 @@
+{% import 'components/input.html' as input %}
+{% import 'components/select.html' as select %}
+{% extends 'layout/base.html' %} {% block title %}Crear Usuario{% endblock %} {%
+block content %}
+<div class="max-w-[var(--container-width)] w-full bg-white p-8 rounded-lg shadow">
+  <h2 class="text-2xl font-bold mb-6">Crear Usuario</h2>
+
+  <form method="POST">
+    <div class="grid grid-cols-2 gap-4">
+      <!-- Nombre -->
+      {{ input.input_field('nombres', type='text', placeholder='Escribe tu nombre',label='Nombre') }}
+
+      <!-- Apellido Paterno -->
+      {{ input.input_field('ap_paterno', type='text', placeholder='Escribe tu apellido paterno',label='Apellido
+      Parteno') }}
+
+      <!-- Apellido Materno -->
+      {{ input.input_field('ap_materno', type='text', placeholder='Escribe tu apellido materno',label='Apellido
+      Marteno') }}
+
+      <!-- Usuario -->
+      {{ input.input_field('usuario', type='text', placeholder='Escribe tu usuario',label='Usuario') }}
+
+      <!-- Contraseña -->
+      {{ input.input_field('contrasena', type='password', placeholder='Escribe tu contraseña',label='Contraseña') }}
+
+      <!-- Repetir Contraseña -->
+      {{ input.input_field('repetir_contrasena', type='password' ,placeholder='Repite la contraseña',label='Repetir contraseña') }}
+
+      <!-- Tipo de Usuario -->
+      {{ select.select_field('tipo_usuario',options=tipos_usuario, label='Tipo de Usuario') }}
+
+    </div>
+    <!-- Botón -->
+    <div class="flex justify-end">
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+        Guardar Usuario
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}

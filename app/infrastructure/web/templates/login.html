@@ -1,0 +1,49 @@
+{% import 'components/input.html' as input %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}" />
+</head>
+
+<body>
+    <div class="flex min-h-screen">
+        <!-- left -->
+        <div class="w-full flex flex-col justify-center items-center bg-blue-300 text-white">
+            <div class="text-center">
+                <h2 class="text-3xl">Sistema de Chatbot Médico</h2>
+                <p>Gestión i012.nteligente de citas médicas a través de conversaciones automatizadas</p>
+            </div>
+            <div class="mt-10">
+                <ul>
+                    <li>Programación automática de citas</li>
+                    <li>Atención 24/7 via chatbot</li>
+                    <li>Gestión de especialidades médicas</li>
+                    <li>Reportes y estadísticas</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- right -->
+        <div class="flex flex-col justify-center items-center w-full">
+
+            <div class="text-center mb-8">
+                <h1 class="text-2xl font-semibold">Iniciar Sesión</h1>
+                <p>Accede a tu panel de administración</p>
+            </div>
+            <form method="POST" action="/login" class="space-y-4 w-96 flex flex-col">
+
+                {{ input.input_field('username', type='text', placeholder='Escribe tu usuario',label='Usuario') }}
+
+                {{ input.input_field('password', type='password', placeholder='Escribe tu contraseña',label='Contraseña') }}
+
+                <button type="submit" class="p-2.5 rounded-lg bg-blue-300 text-white">Ingresar</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

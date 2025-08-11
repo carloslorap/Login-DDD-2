@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Mi App{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/tailwind.css') }}"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      {% include 'components/sidebar.html' %}
+
+      <div class="flex-1 flex flex-col">
+        <!-- Navbar -->
+        {% include 'components/navbar.html' %}
+        <!-- Contenido principal -->
+        <main class="flex-1 flex justify-center items-start p-8">{% block content %}{% endblock %}</main>
+      </div>
+    </div>
+  </body>
+</html>
