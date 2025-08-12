@@ -3,6 +3,9 @@ from datetime import datetime
 from app.infrastructure.repositories.solicitud.solicitud_repository_impl import SolicitudRepositoryImpl
 from app.application.solicitud.solicitud_services import SolicitudService
 
+# decoradores
+from app.decorators.protection import login_required
+
 solicitudes_bp = Blueprint("solicitudes", __name__)
 
 repo = SolicitudRepositoryImpl()
@@ -10,6 +13,7 @@ solicitud_service = SolicitudService(repo)
 
 
 @solicitudes_bp.route("/solicitudes", methods=["GET"])
+@login_required
 def listar_solicitudes():
     
     nombre = request.args.get("nombre")

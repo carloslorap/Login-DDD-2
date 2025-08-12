@@ -44,6 +44,4 @@ class UserServices:
             tipo_usuario_id=tipo_usuario_id
         )
         print("Entrando a UserServices.create_user")
-        print(nombres, ap_paterno, ap_materno, usuario, contrasena, tipo_usuario_id)
-
         return self.user_repository.create_user(nuevo_usuario)

@@ -1,8 +1,8 @@
 from typing import List
 from app.domain.user.typeUser_repository import TipoUsuarioRepository
 from app.domain.user.type_user import TipoUsuario
-from app.infrastructure.models.user_model import TipoUsuario as TipoUsuarioModel, Usuario
-from app.infrastructure.models.user_model import Usuario as UsuarioModel, Usuario
+from app.infrastructure.models.user_model import TipoUsuario as TipoUsuarioModel
+from app.infrastructure.models.user_model import Usuario as UsuarioModel
 from app.infrastructure.db.connection import SessionLocal
 from app.domain.user.usuario_repository import UserRepository
 from app.domain.user.usuario import User
