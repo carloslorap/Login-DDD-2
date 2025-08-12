@@ -1,0 +1,75 @@
+{% extends 'layout/base.html' %} {% block title %}Solicitudes{% endblock %} {%
+block content %}
+
+<div class="max-w-7xl mx-auto bg-white shadow-lg rounded-lg p-6">
+  <h1 class="text-2xl font-bold text-gray-800 mb-4">
+    Solicitudes de Citas Médicas
+  </h1>
+
+  <div class="overflow-x-auto">
+    <form method="get" class="mb-4">
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Buscar por nombre"
+        class="border px-2 py-1"
+      />
+      <input type="date" name="fecha_inicio" class="border px-2 py-1" />
+      <input type="date" name="fecha_fin" class="border px-2 py-1" />
+      <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded">
+        Filtrar
+      </button>
+    </form>
+
+    <table class="min-w-full border border-gray-200">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="px-4 py-2 border">ID</th>
+          <th class="px-4 py-2 border">Nombres</th>
+          <th class="px-4 py-2 border">Especialidad</th>
+          <th class="px-4 py-2 border">Documento</th>
+          <th class="px-4 py-2 border">Teléfono</th>
+          <th class="px-4 py-2 border">SIS</th>
+          <th class="px-4 py-2 border">Atendido</th>
+          <th class="px-4 py-2 border">Estado</th>
+          <th class="px-4 py-2 border">Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for solicitud in solicitudes %}
+        <tr class="hover:bg-gray-50">
+          <td class="px-4 py-2 border text-center">
+            {{ solicitud.solicitud_id }}
+          </td>
+          <td class="px-4 py-2 border">{{ solicitud.nombres }}</td>
+          <td class="px-4 py-2 border">{{ solicitud.especialidad_nombre }}</td>
+          <td class="px-4 py-2 border">
+            {{ solicitud.tipo_documento_id }} - {{ solicitud.numero_documento }}
+          </td>
+          <td class="px-4 py-2 border">{{ solicitud.telefono }}</td>
+          <td class="px-4 py-2 border text-center">
+            {% if solicitud.sis %} ✅ {% else %} ❌ {% endif %}
+          </td>
+          <td class="px-4 py-2 border text-center">
+            {% if solicitud.atendido %} 🟢 {% else %} 🔴 {% endif %}
+          </td>
+          <td class="px-4 py-2 border text-center">
+            {% if solicitud.estado %} Activo {% else %} Inactivo {% endif %}
+          </td>
+          <td class="px-4 py-2 border">
+            {{ solicitud.created_at.strftime('%d/%m/%Y') if solicitud.created_at
+            else '' }}
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="9" class="text-center py-4 text-gray-500">
+            No hay solicitudes registradas.
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
