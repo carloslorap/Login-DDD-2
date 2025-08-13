@@ -11,12 +11,24 @@ class SolicitudRepository(ABC):
         self,
         nombre: Optional[str] = None,
         fecha_inicio: Optional[datetime] = None,
-        fecha_fin: Optional[datetime] = None
+        fecha_fin: Optional[datetime] = None,
+        atendidos:Optional[bool] = None,
     ) -> List[Solicitud]:
         pass
     
     @abstractmethod
-    def actualizar_estado_y_atendido(
+    def aprobar_solicitud(
+        self,
+        solicitud_id: int,
+        nuevo_estado_id: int,
+        atendido: int,
+        usuario: str,
+    ) -> None:
+        """Actualiza estado_solicitud_id y atendido."""
+        pass
+    
+    @abstractmethod
+    def desaprobar_solicitud(
         self,
         solicitud_id: int,
         nuevo_estado_id: int,

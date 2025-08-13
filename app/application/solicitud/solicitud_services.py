@@ -11,15 +11,25 @@ class SolicitudService:
         self,
         nombre: Optional[str] = None,
         fecha_inicio: Optional[datetime] = None,
-        fecha_fin: Optional[datetime] = None
+        fecha_fin: Optional[datetime] = None,
+        atendidos:Optional[bool]= None,
     ) -> List[Solicitud]:
-        return self.repository.listar_filtrado(nombre, fecha_inicio, fecha_fin)
+        return self.repository.listar_filtrado(nombre, fecha_inicio, fecha_fin,atendidos)
     
     def aprobar(self, solicitud_id: int, usuario_actual: str) -> None:
         # 2 = ACEPTADO, atendido = 1
-        self.repository.actualizar_estado_y_atendido(
+        self.repository.aprobar_solicitud(
             solicitud_id=solicitud_id,
             nuevo_estado_id=2,
+            atendido=1,
+            usuario=usuario_actual,
+        )
+        
+    def desaprobar(self, solicitud_id: int, usuario_actual: str) -> None:
+        # 3 = ACEPTADO, atendido = 1
+        self.repository.desaprobar_solicitud(
+            solicitud_id=solicitud_id,
+            nuevo_estado_id=3,
             atendido=1,
             usuario=usuario_actual,
         )
