@@ -30,6 +30,7 @@ def login():
         try:
             user = login_use_case.execute(username, password) 
             session["user_id"] = user.usuario_id
+            session["username"] = user.usuario  
             return redirect(url_for("auth.dashboard"))
         except ValueError as e:
             flash(str(e))

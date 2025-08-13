@@ -54,3 +54,27 @@ class SolicitudRepositoryImpl(SolicitudRepository):
                 for row in registros
             ]       
 
+    def actualizar_estado_y_atendido(
+        self,
+        solicitud_id: int,
+        nuevo_estado_id: int,
+        atendido: int,
+        usuario:str
+    ) -> None:
+        with SessionLocal() as db:
+            try:
+                filas = (
+                    db.query(SolicitudModel)
+                    .filter(SolicitudModel.solicitud_id == int(solicitud_id))
+                    .update({
+                        SolicitudModel.estado_solicitud_id: int(nuevo_estado_id),
+                        SolicitudModel.atendido: int(atendido),
+                        SolicitudModel.usuario: usuario, 
+                        SolicitudModel.updated_at: datetime.now(),
+                    }, synchronize_session=False)
+                )
+                db.commit()
+            except Exception as e:
+                db.rollback()
+                raise
+

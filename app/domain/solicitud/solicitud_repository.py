@@ -5,10 +5,7 @@ from typing import Optional
 from datetime import datetime
 
 class SolicitudRepository(ABC):
-    # @abstractmethod
-    # def listar(self) -> List[Solicitud]:
-    #     pass 
-    
+
     @abstractmethod
     def listar_filtrado(
         self,
@@ -16,4 +13,15 @@ class SolicitudRepository(ABC):
         fecha_inicio: Optional[datetime] = None,
         fecha_fin: Optional[datetime] = None
     ) -> List[Solicitud]:
+        pass
+    
+    @abstractmethod
+    def actualizar_estado_y_atendido(
+        self,
+        solicitud_id: int,
+        nuevo_estado_id: int,
+        atendido: int,
+        usuario: str,
+    ) -> None:
+        """Actualiza estado_solicitud_id y atendido."""
         pass

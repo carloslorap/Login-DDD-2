@@ -100,46 +100,6 @@
         "documentation": {}
     },
     {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -157,6 +117,14 @@
     },
     {
         "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -201,6 +169,118 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "RespuestaSolicitud",
+        "importPath": "app.domain.solicitud.respuesta_solicitud",
+        "description": "app.domain.solicitud.respuesta_solicitud",
+        "isExtraImport": true,
+        "detail": "app.domain.solicitud.respuesta_solicitud",
+        "documentation": {}
+    },
+    {
+        "label": "RespuestaSolicitud",
+        "importPath": "app.domain.solicitud.respuesta_solicitud",
+        "description": "app.domain.solicitud.respuesta_solicitud",
+        "isExtraImport": true,
+        "detail": "app.domain.solicitud.respuesta_solicitud",
+        "documentation": {}
+    },
+    {
+        "label": "RespuestaSolicitud",
+        "importPath": "app.domain.solicitud.respuesta_solicitud",
+        "description": "app.domain.solicitud.respuesta_solicitud",
+        "isExtraImport": true,
+        "detail": "app.domain.solicitud.respuesta_solicitud",
+        "documentation": {}
+    },
+    {
+        "label": "RespuestaSolicitudRepository",
+        "importPath": "app.domain.solicitud.respuesta_solicitud_repository",
+        "description": "app.domain.solicitud.respuesta_solicitud_repository",
+        "isExtraImport": true,
+        "detail": "app.domain.solicitud.respuesta_solicitud_repository",
+        "documentation": {}
+    },
+    {
+        "label": "RespuestaSolicitudRepository",
+        "importPath": "app.domain.solicitud.respuesta_solicitud_repository",
+        "description": "app.domain.solicitud.respuesta_solicitud_repository",
+        "isExtraImport": true,
+        "detail": "app.domain.solicitud.respuesta_solicitud_repository",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -508,6 +588,38 @@
         "documentation": {}
     },
     {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "Blueprint",
         "importPath": "flask",
         "description": "flask",
@@ -593,6 +705,30 @@
         "description": "dataclasses",
         "isExtraImport": true,
         "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
         "documentation": {}
     },
     {
@@ -749,6 +885,54 @@
         "documentation": {}
     },
     {
+        "label": "Text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "Boolean",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -869,6 +1053,22 @@
         "documentation": {}
     },
     {
+        "label": "Base",
+        "importPath": "app.infrastructure.db.connection",
+        "description": "app.infrastructure.db.connection",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.db.connection",
+        "documentation": {}
+    },
+    {
+        "label": "SessionLocal",
+        "importPath": "app.infrastructure.db.connection",
+        "description": "app.infrastructure.db.connection",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.db.connection",
+        "documentation": {}
+    },
+    {
         "label": "SessionLocal",
         "importPath": "app.infrastructure.db.connection",
         "description": "app.infrastructure.db.connection",
@@ -933,19 +1133,11 @@
         "documentation": {}
     },
     {
-        "label": "Usuario",
-        "importPath": "app.infrastructure.models.user_model",
-        "description": "app.infrastructure.models.user_model",
+        "label": "RespuestaSolicitudModel",
+        "importPath": "app.infrastructure.models.respuesta_solicitud_model",
+        "description": "app.infrastructure.models.respuesta_solicitud_model",
         "isExtraImport": true,
-        "detail": "app.infrastructure.models.user_model",
-        "documentation": {}
-    },
-    {
-        "label": "Usuario",
-        "importPath": "app.infrastructure.models.user_model",
-        "description": "app.infrastructure.models.user_model",
-        "isExtraImport": true,
-        "detail": "app.infrastructure.models.user_model",
+        "detail": "app.infrastructure.models.respuesta_solicitud_model",
         "documentation": {}
     },
     {
@@ -1005,6 +1197,14 @@
         "documentation": {}
     },
     {
+        "label": "login_required",
+        "importPath": "app.decorators.protection",
+        "description": "app.decorators.protection",
+        "isExtraImport": true,
+        "detail": "app.decorators.protection",
+        "documentation": {}
+    },
+    {
         "label": "SolicitudRepositoryImpl",
         "importPath": "app.infrastructure.repositories.solicitud.solicitud_repository_impl",
         "description": "app.infrastructure.repositories.solicitud.solicitud_repository_impl",
@@ -1018,6 +1218,22 @@
         "description": "app.application.solicitud.solicitud_services",
         "isExtraImport": true,
         "detail": "app.application.solicitud.solicitud_services",
+        "documentation": {}
+    },
+    {
+        "label": "RespuestaSolicitudRepositoryImpl",
+        "importPath": "app.infrastructure.repositories.solicitud.respuesta_solicitud_repository_impl",
+        "description": "app.infrastructure.repositories.solicitud.respuesta_solicitud_repository_impl",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.repositories.solicitud.respuesta_solicitud_repository_impl",
+        "documentation": {}
+    },
+    {
+        "label": "RespuestaSolicitudService",
+        "importPath": "app.application.solicitud.respuesta_solicitud_service",
+        "description": "app.application.solicitud.respuesta_solicitud_service",
+        "isExtraImport": true,
+        "detail": "app.application.solicitud.respuesta_solicitud_service",
         "documentation": {}
     },
     {
@@ -1184,6 +1400,15 @@
         "documentation": {}
     },
     {
+        "label": "RespuestaSolicitudService",
+        "kind": 6,
+        "importPath": "app.application.solicitud.respuesta_solicitud_service",
+        "description": "app.application.solicitud.respuesta_solicitud_service",
+        "peekOfCode": "class RespuestaSolicitudService:\n    def __init__(self, repository: RespuestaSolicitudRepository):\n        self.repository = repository\n    def listar_por_estado(self, estado_solicitud_id: int) -> List[RespuestaSolicitud]:\n        return self.repository.listar_por_estado(estado_solicitud_id)",
+        "detail": "app.application.solicitud.respuesta_solicitud_service",
+        "documentation": {}
+    },
+    {
         "label": "SolicitudService",
         "kind": 6,
         "importPath": "app.application.solicitud.solicitud_services",
@@ -1265,6 +1490,24 @@
         "documentation": {}
     },
     {
+        "label": "RespuestaSolicitud",
+        "kind": 6,
+        "importPath": "app.domain.solicitud.respuesta_solicitud",
+        "description": "app.domain.solicitud.respuesta_solicitud",
+        "peekOfCode": "class RespuestaSolicitud:\n    respuesta_solicitud_id: int\n    nombre: str\n    respuesta: str\n    estado_solicitud_id: int\n    created_at: Optional[datetime] = None\n    updated_at: Optional[datetime] = None\n    estado: Optional[bool] = True",
+        "detail": "app.domain.solicitud.respuesta_solicitud",
+        "documentation": {}
+    },
+    {
+        "label": "RespuestaSolicitudRepository",
+        "kind": 6,
+        "importPath": "app.domain.solicitud.respuesta_solicitud_repository",
+        "description": "app.domain.solicitud.respuesta_solicitud_repository",
+        "peekOfCode": "class RespuestaSolicitudRepository(ABC):\n    @abstractmethod\n    def listar_por_estado(self, estado_solicitud_id: int) -> List[RespuestaSolicitud]:\n        pass",
+        "detail": "app.domain.solicitud.respuesta_solicitud_repository",
+        "documentation": {}
+    },
+    {
         "label": "Solicitud",
         "kind": 6,
         "importPath": "app.domain.solicitud.solicitud",
@@ -1278,7 +1521,7 @@
         "kind": 6,
         "importPath": "app.domain.solicitud.solicitud_repository",
         "description": "app.domain.solicitud.solicitud_repository",
-        "peekOfCode": "class SolicitudRepository(ABC):\n    # @abstractmethod\n    # def listar(self) -> List[Solicitud]:\n    #     pass \n    @abstractmethod\n    def listar_filtrado(\n        self,\n        nombre: Optional[str] = None,\n        fecha_inicio: Optional[datetime] = None,\n        fecha_fin: Optional[datetime] = None",
+        "peekOfCode": "class SolicitudRepository(ABC):\n    @abstractmethod\n    def listar_filtrado(\n        self,\n        nombre: Optional[str] = None,\n        fecha_inicio: Optional[datetime] = None,\n        fecha_fin: Optional[datetime] = None\n    ) -> List[Solicitud]:\n        pass\n    @abstractmethod",
         "detail": "app.domain.solicitud.solicitud_repository",
         "documentation": {}
     },
@@ -1364,6 +1607,15 @@
         "documentation": {}
     },
     {
+        "label": "RespuestaSolicitudModel",
+        "kind": 6,
+        "importPath": "app.infrastructure.models.respuesta_solicitud_model",
+        "description": "app.infrastructure.models.respuesta_solicitud_model",
+        "peekOfCode": "class RespuestaSolicitudModel(Base):\n    __tablename__ = \"tbl_respuesta_solicitud\"\n    respuesta_solicitud_id = Column(Integer, primary_key=True, autoincrement=True)\n    created_at = Column(DateTime)\n    updated_at = Column(DateTime)\n    # Ej.: \"aprobado\", \"rechazado\", \"sin citas\", etc.\n    nombre = Column(String(100), nullable=False)\n    # Texto que se autocompleta en el modal\n    respuesta = Column(Text, nullable=False)\n    # 2 = aprobado, 3 = rechazado (FK a tbl_estado_solicitud.estado_solicitud_id)",
+        "detail": "app.infrastructure.models.respuesta_solicitud_model",
+        "documentation": {}
+    },
+    {
         "label": "SolicitudModel",
         "kind": 6,
         "importPath": "app.infrastructure.models.solicitud_model",
@@ -1400,6 +1652,15 @@
         "documentation": {}
     },
     {
+        "label": "RespuestaSolicitudRepositoryImpl",
+        "kind": 6,
+        "importPath": "app.infrastructure.repositories.solicitud.respuesta_solicitud_repository_impl",
+        "description": "app.infrastructure.repositories.solicitud.respuesta_solicitud_repository_impl",
+        "peekOfCode": "class RespuestaSolicitudRepositoryImpl(RespuestaSolicitudRepository):\n    def listar_por_estado(self, estado_solicitud_id: int) -> List[RespuestaSolicitud]:\n        with SessionLocal() as db:\n            registros = (\n                db.query(RespuestaSolicitudModel)\n                .filter(RespuestaSolicitudModel.estado_solicitud_id == estado_solicitud_id)\n                .all()\n            )\n            return [\n                RespuestaSolicitud(",
+        "detail": "app.infrastructure.repositories.solicitud.respuesta_solicitud_repository_impl",
+        "documentation": {}
+    },
+    {
         "label": "SolicitudRepositoryImpl",
         "kind": 6,
         "importPath": "app.infrastructure.repositories.solicitud.solicitud_repository_impl",
@@ -1431,7 +1692,7 @@
         "kind": 2,
         "importPath": "app.infrastructure.web.routes.auth_routes",
         "description": "app.infrastructure.web.routes.auth_routes",
-        "peekOfCode": "def login():\n    if request.method == \"POST\":\n        username = request.form.get(\"username\") \n        password = request.form.get(\"password\")\n        try:\n            user = login_use_case.execute(username, password) \n            session[\"user_id\"] = user.usuario_id\n            return redirect(url_for(\"auth.dashboard\"))\n        except ValueError as e:\n            flash(str(e))",
+        "peekOfCode": "def login():\n    if request.method == \"POST\":\n        username = request.form.get(\"username\") \n        password = request.form.get(\"password\")\n        try:\n            user = login_use_case.execute(username, password) \n            session[\"user_id\"] = user.usuario_id\n            session[\"username\"] = user.usuario  \n            return redirect(url_for(\"auth.dashboard\"))\n        except ValueError as e:",
         "detail": "app.infrastructure.web.routes.auth_routes",
         "documentation": {}
     },
@@ -1494,7 +1755,16 @@
         "kind": 2,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "def listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    fecha_inicio = datetime.strptime(fecha_inicio_str, \"%Y-%m-%d\") if fecha_inicio_str else None\n    fecha_fin = datetime.strptime(fecha_fin_str, \"%Y-%m-%d\") if fecha_fin_str else None\n    solicitudes = solicitud_service.listar_filtrado(nombre, fecha_inicio, fecha_fin)\n    return render_template(\"solicitudes.html\", solicitudes=solicitudes)",
+        "peekOfCode": "def listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    fecha_inicio = datetime.strptime(fecha_inicio_str, \"%Y-%m-%d\") if fecha_inicio_str else None\n    fecha_fin = datetime.strptime(fecha_fin_str, \"%Y-%m-%d\") if fecha_fin_str else None\n    respuestas_aprobado = respuesta_service.listar_por_estado(2)\n    solicitudes = solicitud_service.listar_filtrado(nombre, fecha_inicio, fecha_fin)\n    return render_template(\"solicitudes.html\", solicitudes=solicitudes,respuestas_aprobado=respuestas_aprobado)\n@solicitudes_bp.route(\"/solicitudes/<int:solicitud_id>/aprobar\", methods=[\"POST\"])",
+        "detail": "app.infrastructure.web.routes.solicitud_routes",
+        "documentation": {}
+    },
+    {
+        "label": "aprobar",
+        "kind": 2,
+        "importPath": "app.infrastructure.web.routes.solicitud_routes",
+        "description": "app.infrastructure.web.routes.solicitud_routes",
+        "peekOfCode": "def aprobar(solicitud_id: int):\n    usuario_actual = session.get(\"username\")\n    try:\n        solicitud_service.aprobar(solicitud_id,usuario_actual)\n        flash(\"Solicitud aprobada correctamente.\", \"success\")\n    except Exception as e:\n        flash(f\"Error al aprobar: {e}\", \"danger\")\n    return redirect(url_for(\"solicitudes.listar_solicitudes\"))",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1503,7 +1773,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "solicitudes_bp = Blueprint(\"solicitudes\", __name__)\nrepo = SolicitudRepositoryImpl()\nsolicitud_service = SolicitudService(repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    fecha_inicio = datetime.strptime(fecha_inicio_str, \"%Y-%m-%d\") if fecha_inicio_str else None\n    fecha_fin = datetime.strptime(fecha_fin_str, \"%Y-%m-%d\") if fecha_fin_str else None",
+        "peekOfCode": "solicitudes_bp = Blueprint(\"solicitudes\", __name__)\nrepo = SolicitudRepositoryImpl()\nsolicitud_service = SolicitudService(repo)\nrespuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1512,7 +1782,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "repo = SolicitudRepositoryImpl()\nsolicitud_service = SolicitudService(repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    fecha_inicio = datetime.strptime(fecha_inicio_str, \"%Y-%m-%d\") if fecha_inicio_str else None\n    fecha_fin = datetime.strptime(fecha_fin_str, \"%Y-%m-%d\") if fecha_fin_str else None\n    solicitudes = solicitud_service.listar_filtrado(nombre, fecha_inicio, fecha_fin)",
+        "peekOfCode": "repo = SolicitudRepositoryImpl()\nsolicitud_service = SolicitudService(repo)\nrespuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1521,7 +1791,25 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "solicitud_service = SolicitudService(repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    fecha_inicio = datetime.strptime(fecha_inicio_str, \"%Y-%m-%d\") if fecha_inicio_str else None\n    fecha_fin = datetime.strptime(fecha_fin_str, \"%Y-%m-%d\") if fecha_fin_str else None\n    solicitudes = solicitud_service.listar_filtrado(nombre, fecha_inicio, fecha_fin)\n    return render_template(\"solicitudes.html\", solicitudes=solicitudes)",
+        "peekOfCode": "solicitud_service = SolicitudService(repo)\nrespuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    fecha_inicio = datetime.strptime(fecha_inicio_str, \"%Y-%m-%d\") if fecha_inicio_str else None",
+        "detail": "app.infrastructure.web.routes.solicitud_routes",
+        "documentation": {}
+    },
+    {
+        "label": "respuesta_repo",
+        "kind": 5,
+        "importPath": "app.infrastructure.web.routes.solicitud_routes",
+        "description": "app.infrastructure.web.routes.solicitud_routes",
+        "peekOfCode": "respuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    fecha_inicio = datetime.strptime(fecha_inicio_str, \"%Y-%m-%d\") if fecha_inicio_str else None\n    fecha_fin = datetime.strptime(fecha_fin_str, \"%Y-%m-%d\") if fecha_fin_str else None",
+        "detail": "app.infrastructure.web.routes.solicitud_routes",
+        "documentation": {}
+    },
+    {
+        "label": "respuesta_service",
+        "kind": 5,
+        "importPath": "app.infrastructure.web.routes.solicitud_routes",
+        "description": "app.infrastructure.web.routes.solicitud_routes",
+        "peekOfCode": "respuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    fecha_inicio = datetime.strptime(fecha_inicio_str, \"%Y-%m-%d\") if fecha_inicio_str else None\n    fecha_fin = datetime.strptime(fecha_fin_str, \"%Y-%m-%d\") if fecha_fin_str else None\n    respuestas_aprobado = respuesta_service.listar_por_estado(2)",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },

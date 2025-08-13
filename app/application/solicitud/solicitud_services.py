@@ -14,3 +14,14 @@ class SolicitudService:
         fecha_fin: Optional[datetime] = None
     ) -> List[Solicitud]:
         return self.repository.listar_filtrado(nombre, fecha_inicio, fecha_fin)
+    
+    def aprobar(self, solicitud_id: int, usuario_actual: str) -> None:
+        # 2 = ACEPTADO, atendido = 1
+        self.repository.actualizar_estado_y_atendido(
+            solicitud_id=solicitud_id,
+            nuevo_estado_id=2,
+            atendido=1,
+            usuario=usuario_actual,
+        )
+    
+    

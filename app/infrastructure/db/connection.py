@@ -4,7 +4,7 @@ from app.config.settings import settings
 
 engine = create_engine(
     settings.SQLALCHEMY_DATABASE_URL,
-    echo=False,  # para ver las queries en consola (puedes quitarlo en producción)
+    echo=True,  # para ver las queries en consola (puedes quitarlo en producción)
     future=True
 )
 
