@@ -7,8 +7,9 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/tailwind.css') }}"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-ligth-400">
     <div class="flex min-h-screen">
       <!-- Sidebar -->
       {% include 'components/sidebar.html' %}
@@ -17,7 +18,7 @@
         <!-- Navbar -->
         {% include 'components/navbar.html' %}
         <!-- Contenido principal -->
-        <main class="flex-1 flex justify-center items-start p-8">{% block content %}{% endblock %}</main>
+        <main class="flex-1 ml-64 flex justify-center items-start p-8">{% block content %}{% endblock %}</main>
       </div>
     </div>
   </body>

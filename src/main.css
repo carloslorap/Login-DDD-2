@@ -2,11 +2,37 @@
 
 @theme {
 
-  --color-primary:#677bb4;
-  --color-primary-hover:#566692;
+  --color-primary-500:#1A4C8C;
+  --color-primary-400:#2160B0;
+  --color-primary-300:#2773d5;
+  --color-primary-200:#4a8add;
+  --color-primary-100:#6ea2e4;
+  --color-primary-50:#92B9EB;
+
+  --color-primary:#1A4C8C;
+
+  --color-dark-500:#000000;
+  --color-dark-100:#9F9F9F;
+  --color-dark-200:#808080;
+  --color-dark-300:#606060;
+
+  --color-gray-dark:#656d9a;
+
+  --color-ligth-500:#FFFFFF;
+  --color-ligth-400:#F7F9FB;
+
+  --color-danger:#EF4D56;
+  --color-danger-hover:#D84049;
+  --color-success:#22C5AD;
+  --color-hover-success:#18AE98;
+  --color-warning:#FF9F43;
+  --color-disabled:#8E98BB;
+
 
   --font-sans: "Poppins", sans-serif;
   --container-width: 1440px;
+
+  --color-primary-hover:#EEF5FF
 
 
 }

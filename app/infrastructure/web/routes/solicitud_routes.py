@@ -75,9 +75,18 @@ def listar_solicitudes():
 @login_required
 def aprobar(solicitud_id: int):
     usuario_actual = session.get("username")
+    mensaje = request.form.get("mensaje", "").strip()
+    destinatario = request.form.get("destinatario", "").strip()
     try:
         solicitud_service.aprobar(solicitud_id, usuario_actual)
-        flash("Solicitud aprobada correctamente.", "success")
+        
+        if destinatario and mensaje:
+            send_email(
+                to=destinatario,
+                subject="Respuesta a su solicitud",
+                body=mensaje
+            )
+        flash("Solicitud aprobada y correo enviado.", "success")
     except Exception as e:
         flash(f"Error al aprobar: {e}", "danger")
     return redirect(url_for("solicitudes.listar_solicitudes"))
@@ -86,14 +95,16 @@ def aprobar(solicitud_id: int):
 @solicitudes_bp.route("/solicitudes/<int:solicitud_id>/desaprobar", methods=["POST"])
 @login_required
 def desaprobar(solicitud_id: int):
-    usuario_actual = session.get("username") or "sistema"
+    usuario_actual = session.get("username")
     mensaje = request.form.get("mensaje", "").strip()
     destinatario = request.form.get("destinatario", "").strip()
+    
+    
 
     try:
         # 1) Actualiza estado en BD
         solicitud_service.desaprobar(solicitud_id, usuario_actual)
-
+        
         # 2) Envía email si hay destinatario y mensaje
         if destinatario and mensaje:
             send_email(
@@ -101,7 +112,6 @@ def desaprobar(solicitud_id: int):
                 subject="Respuesta a su solicitud",
                 body=mensaje
             )
-
         flash("Solicitud desaprobada y correo enviado.", "success")
     except Exception as e:
         flash(f"Error al desaprobar/enviar correo: {e}", "danger")

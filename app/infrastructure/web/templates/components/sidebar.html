@@ -1,17 +1,55 @@
-<aside class="w-64 bg-primary text-white h-screen p-4">
-  <ul class="space-y-2">
+<aside class="fixed w-60 left-0 flex flex-col bg-ligth-500 h-screen p-4 shadow-md justify-between">
+  <ul class="space-y-5 ">
 
-     <li>
-      <a href="/" class="block hover:bg-primary-hover p-2 rounded"
-        >Dashboard</a
-      >
+    <div class="border p-5">
+      <h1 class="font-extrabold">Logo</h1>
+    </div>
+
+    <li
+      class="flex justify-start items-center pl-5 transition-all duration-100 ease-in-out hover:border-l-6 border-primary-200 rounded-md cursor-pointer">
+
+      <span class="material-symbols-outlined text-gray-dark">
+        browse_activity
+      </span>
+      <a href="/"
+        class="block p-2 ml-2 rounded mt-1 text-dark-500 hover:text-primary-200 font-bold text-sm ">
+
+        Dashboard</a>
     </li>
-    <li>
-      <a href="/user" class="block hover:bg-primary-hover p-2 rounded">Crear Usuario</a>
+    <li
+      class="flex justify-start items-center pl-5  transition-all duration-100 ease-in-out hover:border-l-6 border-primary-200 rounded-md cursor-pointer">
+      <span class="material-symbols-outlined text-gray-dark">
+        person_add
+      </span>
+      <a href="/user"
+        class="block p-2 ml-2 rounded mt-1 text-dark-500 hover:text-primary-200 font-bold text-sm">
+
+        Crear Usuario</a>
     </li>
-        <li>
-      <a href="/solicitudes" class="block hover:bg-primary-hover p-2 rounded">Solicitudes</a>
+
+    <li
+      class="flex justify-start items-center pl-5  transition-all duration-100 ease-in-out hover:border-l-6 border-primary-200 rounded-md cursor-pointer">
+      <span class="material-symbols-outlined text-gray-dark">
+        clinical_notes
+      </span>
+
+      <a href="/solicitudes"
+        class="block p-2 rounded mt-1 text-dark-500 hover:text-primary-200 font-bold text-sm">
+
+        Solicitudes</a>
     </li>
-   
   </ul>
+
+  <div>
+    <div
+      class="flex justify-start items-center pl-5 transition-all duration-100 ease-in-out border-l-6 border-primary-200 bg-primary-hover rounded-md">
+      <span class="material-symbols-outlined text-primary-200">
+        logout
+      </span>
+      <a href="/logout"
+        class="block hover:bg-primary-hover px-2 py-3 ml-2 rounded mt-1 text-dark-500 font-semibold text-sm">
+
+        Cerrar sesion</a>
+    </div>
+  </div>
 </aside>
