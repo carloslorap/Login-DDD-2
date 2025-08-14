@@ -1,6 +1,7 @@
-from typing import List, Optional
+from typing import List, Optional,Tuple
 from app.domain.solicitud.solicitud import Solicitud
 from datetime import datetime
+from sqlalchemy import func
 from app.domain.solicitud.solicitud_repository import SolicitudRepository
 from app.infrastructure.models.solicitud_model import SolicitudModel
 from app.infrastructure.db.connection import SessionLocal
@@ -15,9 +16,35 @@ class SolicitudRepositoryImpl(SolicitudRepository):
         fecha_inicio: Optional[datetime] = None,
         fecha_fin: Optional[datetime] = None,
         atendidos: Optional[bool] = None,
-    ) -> List[Solicitud]:
+        page: int = 1,
+        per_page: int = 10,
+    ) -> Tuple[List[Solicitud], int]:
+
+        page = max(1, int(page or 1))
+        per_page = max(1, int(per_page or 10))
         with SessionLocal() as db:
-            query = ( 
+            # ====== Filtros base (sin JOIN) para contar correctamente ======
+            count_query = db.query(func.count(SolicitudModel.solicitud_id)).filter(
+                SolicitudModel.estado == True
+            )
+
+            if atendidos is None:
+                count_query = count_query.filter(SolicitudModel.atendido == 0)
+            elif atendidos is True:
+                count_query = count_query.filter(SolicitudModel.atendido == 1)
+
+            if nombre:
+                count_query = count_query.filter(SolicitudModel.nombres.ilike(f"%{nombre}%"))
+
+            if fecha_inicio and fecha_fin:
+                count_query = count_query.filter(
+                    SolicitudModel.created_at.between(fecha_inicio, fecha_fin)
+                )
+
+            total: int = count_query.scalar() or 0
+
+            # ====== Consulta con JOIN para traer nombre de especialidad ======
+            query = (
                 db.query(
                     SolicitudModel,
                     EspecialidadModel.nombre.label("especialidad_nombre"),
@@ -28,11 +55,11 @@ class SolicitudRepositoryImpl(SolicitudRepository):
                 )
                 .filter(SolicitudModel.estado == True)
             )
+
             if atendidos is None:
-                query= query.filter(SolicitudModel.atendido == 0)
-                
-            if atendidos is True:
-                query = query.filter(SolicitudModel.atendido == 1)    
+                query = query.filter(SolicitudModel.atendido == 0)
+            elif atendidos is True:
+                query = query.filter(SolicitudModel.atendido == 1)
 
             if nombre:
                 query = query.filter(SolicitudModel.nombres.ilike(f"%{nombre}%"))
@@ -41,12 +68,15 @@ class SolicitudRepositoryImpl(SolicitudRepository):
                 query = query.filter(
                     SolicitudModel.created_at.between(fecha_inicio, fecha_fin)
                 )
-            if atendidos:
-                query = query.filter(SolicitudModel.atendido == 1)
+
+            # Orden y paginación
+            query = query.order_by(SolicitudModel.created_at.desc()) \
+                         .offset((page - 1) * per_page) \
+                         .limit(per_page)
 
             registros = query.all()
 
-            return [
+            items = [
                 Solicitud(
                     solicitud_id=row.SolicitudModel.solicitud_id,
                     jid_id=row.SolicitudModel.jid_id,
@@ -70,6 +100,8 @@ class SolicitudRepositoryImpl(SolicitudRepository):
                 )
                 for row in registros
             ]
+
+            return items, total
 
     def aprobar_solicitud(
         self, solicitud_id: int, nuevo_estado_id: int, atendido: int, usuario: str

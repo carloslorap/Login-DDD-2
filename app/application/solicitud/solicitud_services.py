@@ -13,8 +13,10 @@ class SolicitudService:
         fecha_inicio: Optional[datetime] = None,
         fecha_fin: Optional[datetime] = None,
         atendidos:Optional[bool]= None,
+        page: int = 1,
+        per_page: int = 10,
     ) -> List[Solicitud]:
-        return self.repository.listar_filtrado(nombre, fecha_inicio, fecha_fin,atendidos)
+        return self.repository.listar_filtrado(nombre, fecha_inicio, fecha_fin,atendidos, page, per_page)
     
     def aprobar(self, solicitud_id: int, usuario_actual: str) -> None:
         # 2 = ACEPTADO, atendido = 1

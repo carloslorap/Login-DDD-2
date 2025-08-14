@@ -13,6 +13,8 @@ class SolicitudRepository(ABC):
         fecha_inicio: Optional[datetime] = None,
         fecha_fin: Optional[datetime] = None,
         atendidos:Optional[bool] = None,
+        page: int = 1,
+        per_page: int = 10,
     ) -> List[Solicitud]:
         pass
     
