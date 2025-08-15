@@ -15,5 +15,25 @@ class AuthRepositoryImpl(AuthRepository):
                     contrasena=user_row.contrasena,
                 )
             return None
+        
+    def changed_password(
+        self, username: str, contrasena: str
+    ) -> None:
+        with SessionLocal() as db:
+            try:
+                filas = (
+                    db.query(Usuario)
+                    .filter(Usuario.usuario == str(username))
+                    .update(
+                        {
+                            Usuario.contrasena: str(contrasena),
+                        },
+                        synchronize_session=False,
+                    )
+                )
+                db.commit()
+            except Exception as e:
+                db.rollback()
+                raise
  
   

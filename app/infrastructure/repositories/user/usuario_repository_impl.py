@@ -46,3 +46,4 @@ class UserRepositoryImpl(UserRepository):
                 tipo_usuario_id=new_user.tipo_usuario_id,
                 estado=user.estado
             )
+            

@@ -6,6 +6,9 @@ from app.infrastructure.auth.password_hasher import PasswordHasher
 from app.infrastructure.repositories.auth.auth_repository_impl import AuthRepositoryImpl
 from app.application.auth.login_user import LoginUser
 
+from app.infrastructure.repositories.auth.auth_repository_impl import AuthRepositoryImpl
+
+
 # decoradores
 from app.decorators.protection import login_required
 from app.decorators.protection import isLoginReady
@@ -47,3 +50,7 @@ def dashboard():
 def logout():
     session.clear()
     return redirect(url_for("auth.login"))
+
+
+
+

@@ -18,3 +18,5 @@ class LoginUser:
             raise ValueError("Contraseña incorrecta.")
 
         return user
+    
+

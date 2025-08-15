@@ -7,11 +7,6 @@ class AuthRepository(ABC):
     def get_by_username(self, username: str) -> Optional[Auth]:
         pass
     
-    # @abstractmethod
-    # def create_user(self, user: User) -> User:
-    #     pass
-
-    
     # @abstractmethod|
     # def save(self, user: User) -> User:
     #     pass

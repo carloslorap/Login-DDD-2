@@ -148,3 +148,4 @@ class SolicitudRepositoryImpl(SolicitudRepository):
             except Exception as e:
                 db.rollback()
                 raise
+   

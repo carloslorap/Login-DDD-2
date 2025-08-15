@@ -1,5 +1,6 @@
 from math import ceil
 from flask import Blueprint, render_template, request, flash, redirect, url_for, session
+from app.infrastructure.email.mailer import send_templated_email
 from datetime import datetime
 from app.infrastructure.repositories.solicitud.solicitud_repository_impl import (
     SolicitudRepositoryImpl,
@@ -14,7 +15,7 @@ from app.infrastructure.repositories.solicitud.respuesta_solicitud_repository_im
 from app.application.solicitud.respuesta_solicitud_service import (
     RespuestaSolicitudService,
 )
-from app.infrastructure.email.mailer import send_email
+# from app.infrastructure.email.mailer import send_email
 
 solicitudes_bp = Blueprint("solicitudes", __name__)
 
@@ -77,19 +78,27 @@ def aprobar(solicitud_id: int):
     usuario_actual = session.get("username")
     mensaje = request.form.get("mensaje", "").strip()
     destinatario = request.form.get("destinatario", "").strip()
-    image_data = request.form.get("image_data")
     try:
         solicitud_service.aprobar(solicitud_id, usuario_actual)
         
         if destinatario and mensaje:
-            send_email(
+            send_templated_email(
                 to=destinatario,
                 subject="Respuesta a su solicitud",
-                body=mensaje,
-                image_data=image_data or None
+                context={
+                    "titulo": "¡Solicitud Aprobada!",
+                    "nombre": request.form.get("nombre") or "",    # si lo tienes
+                    "intro":  "Hemos revisado su solicitud y fue aprobada:",
+                    "mensaje": mensaje,
+                    "entidad": "Citas Médicas",
+                    "soporte": "soporte@hospital.pe",
+                },
+                image_data_url=request.form.get("image_data") or None,  # si vino imagen desde el modal
+                image_cid="adj-1"
             )
         flash("Solicitud aprobada y correo enviado.", "success")
     except Exception as e:
+        print(e)
         flash(f"Error al aprobar: {e}", "danger")
     return redirect(url_for("solicitudes.listar_solicitudes"))
 
@@ -100,8 +109,6 @@ def desaprobar(solicitud_id: int):
     usuario_actual = session.get("username")
     mensaje = request.form.get("mensaje", "").strip()
     destinatario = request.form.get("destinatario", "").strip()
-    image_data = request.form.get("image_data")
-    
 
     try:
         # 1) Actualiza estado en BD
@@ -109,11 +116,19 @@ def desaprobar(solicitud_id: int):
         
         # 2) Envía email si hay destinatario y mensaje
         if destinatario and mensaje:
-            send_email(
+            send_templated_email(
                 to=destinatario,
                 subject="Respuesta a su solicitud",
-                body=mensaje,
-                image_data=image_data or None
+                context={
+                    "titulo": "¡Solicitud Desaprobada!",
+                    "nombre": request.form.get("nombre") or "",    # si lo tienes
+                    "intro":  "Hemos revisado su solicitud y fue desaprobada:",
+                    "mensaje": mensaje,
+                    "entidad": "Citas Médicas",
+                    "soporte": "soporte@hospital.pe",
+                },
+                image_data_url=request.form.get("image_data") or None,  # si vino imagen desde el modal
+                image_cid="adj-1"
             )
         flash("Solicitud desaprobada y correo enviado.", "success")
     except Exception as e:

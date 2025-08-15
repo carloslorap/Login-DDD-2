@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ titulo or "Respuesta a su solicitud" }}</title>
+    <!-- IMPORTANTE: muchos clientes bloquean CSS externo y media queries;
+         mantenemos estilos inline y estructura simple basada en tablas -->
+</head>
+
+<body style="margin:0;padding:0;background:#f5f7fb;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+        style="background:#f5f7fb;padding:24px 0;">
+        <tr>
+            <td align="center">
+                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0"
+                    style="width:600px;max-width:100%;background:#ffffff;border-radius:8px;overflow:hidden;font-family:Arial,Helvetica,sans-serif;">
+                    <!-- Header -->
+                    <tr>
+                        {% if titulo == '¡Solicitud Aprobada!' %}
+                        <td style="background:#0ea5e9;padding:20px 24px;color:#ffffff;">
+                            <h1 style="margin:0;font-size:20px;line-height:1.3;">{{ titulo or "Respuesta a su solicitud"
+                                }}</h1>
+                        </td>
+                        {% else %}
+                        <td style="background:#f81b1b;padding:20px 24px;color:#ffffff;">
+                            <h1 style="margin:0;font-size:20px;line-height:1.3;">{{ titulo or "Respuesta a su solicitud"
+                                }}</h1>
+                        </td>
+                        {% endif %}
+
+
+                    </tr>
+
+                    <!-- Saludo -->
+                    <tr>
+                        <td style="padding:24px 24px 8px 24px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <!-- Columna texto -->
+                                    <td width="60%" valign="top" style="color:#111827;font-size:15px;line-height:1.6;">
+                                        <p style="margin:0 0 12px 0;">
+                                            {{ intro or "Le compartimos el estado y detalles de su solicitud:" }}
+                                        </p>
+                                    </td>
+
+                                    <!-- Columna logo -->
+                                    <td width="40%" align="right" valign="top">
+                                        <!-- Usa tu base64 o URL; limita tamaño con width para consistencia -->
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_XD9g0PP1AFp7XM0_FrBE_WNyyfcbHlMpvw&s"
+                                            alt="Logo" width="35%"
+                                            style="display:block;height:auto;border:0;outline:none;text-decoration:none;">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Cuerpo del mensaje -->
+                    <tr>
+                        <td style="padding:0 24px 16px 24px;">
+                            <div
+                                style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;padding:16px;color:#111827;font-size:14px;line-height:1.7;">
+                                {{ mensaje }}
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Imagen opcional inline -->
+                    {% if imagen_cid %}
+                    <tr>
+                        <td style="padding:0 24px 16px 24px;" align="center">
+                            <img src="cid:{{ imagen_cid }}" alt="Adjunto" width="560"
+                                style="width:100%;max-width:560px;height:auto;border-radius:6px;border:1px solid #e5e7eb;">
+                        </td>
+                    </tr>
+                    {% endif %}
+
+                    <!-- CTA opcional -->
+                    <!-- {% if cta_url and cta_text %}
+            <tr>
+              <td style="padding:8px 24px 24px 24px;" align="center">
+                <a href="{{ cta_url }}"
+                   style="display:inline-block;background:#10b981;color:#ffffff;text-decoration:none;padding:10px 16px;border-radius:6px;font-size:14px;">
+                  {{ cta_text }}
+                </a>
+              </td>
+            </tr>
+            {% endif %} -->
+
+                    <!-- Footer -->
+                    <tr>
+                        <td
+                            style="border-top:1px solid #e5e7eb;padding:16px 24px;color:#6b7280;font-size:12px;line-height:1.6;">
+                            <p style="margin:0 0 6px 0;">Este mensaje fue enviado por {{ entidad or "Citas Médicas" }}.
+                            </p>
+                            {% if soporte %}
+                            <p style="margin:0;">Soporte: <a href="mailto:{{ soporte }}"
+                                    style="color:#2563eb;text-decoration:none;">{{ soporte }}</a></p>
+                            {% endif %}
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

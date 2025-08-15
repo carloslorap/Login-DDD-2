@@ -39,7 +39,7 @@ def user_create():
 
         # validacion de la contraseña
         if contrasena != repetir_contrasena:
-            flash("Las contraseñas no coinciden")
+            flash("Las contraseñas no coinciden", "danger")
             return redirect(url_for("user.user_create"))
 
         try:
@@ -59,6 +59,13 @@ def user_create():
             flash(f"Error al crear el usuario: {str(e)}", "danger")
 
     tipos_usuario = listar_tipos_usuario.execute()
-    
-    tipos_usuario = [{"id": item.tipo_usuario_id, "value": item.nombre} for item in tipos_usuario]
+
+    tipos_usuario = [
+        {"id": item.tipo_usuario_id, "value": item.nombre} for item in tipos_usuario
+    ]
     return render_template("user_create.html", tipos_usuario=tipos_usuario)
+
+
+@user_bp.route("/change-password", methods=["POST","GET"])
+def changePassword():
+    return render_template("change_password.html")
