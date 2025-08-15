@@ -160,7 +160,7 @@ block content %}
 
         <div id="placeholders-{{ s.solicitud_id }}" class="mt-3 space-y-2"></div>
 
-        <div id="text-area" contenteditable="true" onInput="change(this)"
+        <div class="js-mail-editor rounded-lg border border-dashed w-full h-36 my-3 flex justify-center items-center overflow-y-auto" contenteditable="true"
           class="rounded-lg border border-dashed w-full h-36 my-3 flex justify-center items-center overflow-y-auto">
           <!-- <input type="file" class="cursor-pointer"> -->
         </div>
@@ -181,6 +181,7 @@ block content %}
           <form method="post" action="{{ url_for('solicitudes.aprobar', solicitud_id=s.solicitud_id) }}">
             <input type="hidden" name="mensaje" id="mensaje-{{ s.solicitud_id }}" />
             <input type="hidden" name="destinatario" value="{{ s.email }}" />
+            <input type="hidden" name="image_data" /> 
             <button type="submit"
               class="bg-success hover:bg-hover-success text-white px-4 py-2 rounded-lg cursor-pointer">
               Enviar
@@ -234,7 +235,7 @@ block content %}
 
         <div id="placeholders-reject-{{ s.solicitud_id }}" class="mt-3 space-y-2"></div>
 
-        <div id="text-area" contenteditable="true" onInput="change(this)"
+        <div class="js-mail-editor rounded-lg border border-dashed w-full h-36 my-3 flex justify-center items-center overflow-y-auto" contenteditable="true"
           class="rounded-lg border border-dashed w-full h-36 my-3 flex justify-center items-center overflow-y-auto">
         </div>
 
@@ -252,6 +253,7 @@ block content %}
           <form method="post" action="{{ url_for('solicitudes.desaprobar', solicitud_id=s.solicitud_id) }}">
             <input type="hidden" name="mensaje" id="mensaje-rechazo-{{ s.solicitud_id }}" />
             <input type="hidden" name="destinatario" value="{{ s.email }}" />
+            <input type="hidden" name="image_data" /> 
 
             <button type="submit" class="bg-success hover:bg-hover-success text-white px-4 py-2 rounded-lg cursor-pointer">
               Enviar
@@ -313,8 +315,36 @@ block content %}
   function openModal(id) {
     document.getElementById(`modal-${id}`).style.display = "flex";
   }
+  
   function closeModal(id) {
-    document.getElementById(`modal-${id}`).style.display = "none";
+    const modal= document.getElementById(`modal-${id}`) 
+    if (!modal) return;
+
+  // 1) Resetear selector a "Seleccione una opción"
+  const select = modal.querySelector('select[name="respuesta_solicitud_id"]');
+  if (select) select.selectedIndex = 0; // vuelve al primer <option>
+
+  // 2) Limpiar el preview del mensaje (aprobación)
+  const preview = document.getElementById(`respuesta-texto-${id}`);
+  if (preview) preview.textContent = '';
+
+  // 3) (si alguna vez generas placeholders en aprobación) limpiarlos
+  const placeholders = document.getElementById(`placeholders-${id}`);
+  if (placeholders) placeholders.innerHTML = '';
+
+  // 4) Limpiar editor e imagen
+  const editor = modal.querySelector('.js-mail-editor');
+  if (editor) editor.innerHTML = '';
+
+  const hiddenImg = modal.querySelector('input[name="image_data"]');
+  if (hiddenImg) hiddenImg.value = '';
+
+  // 5) Limpiar mensaje oculto (si lo usas)
+  const hiddenMsg = document.getElementById(`mensaje-${id}`);
+  if (hiddenMsg) hiddenMsg.value = '';
+
+  // 6) Cerrar modal
+  modal.style.display = "none";
   }
 
   function getPlaceholders(template) {
@@ -324,6 +354,7 @@ block content %}
     while ((m = re.exec(template)) !== null) set.add(m[1].trim());
     return Array.from(set);
   }
+  
   function buildText(template, values) {
     return template.replace(
       /\{([^}]+)\}/g,
@@ -388,35 +419,113 @@ block content %}
   function openModalReject(id) {
     document.getElementById(`modal-reject-${id}`).style.display = "flex";
   }
+  
   function closeModalReject(id) {
-    document.getElementById(`modal-reject-${id}`).style.display = "none";
+const modal = document.getElementById(`modal-reject-${id}`);
+  if (!modal) return;
+
+  // 1) Resetear selector
+  const select = modal.querySelector('select[name="respuesta_solicitud_id"]');
+  if (select) select.selectedIndex = 0;
+
+  // 2) Limpiar preview y placeholders (rechazo)
+  const preview = document.getElementById(`respuesta-texto-rechazada-${id}`);
+  if (preview) preview.textContent = '';
+
+  const placeholders = document.getElementById(`placeholders-reject-${id}`);
+  if (placeholders) placeholders.innerHTML = '';
+
+  // 3) Limpiar editor e imagen
+  const editor = modal.querySelector('.js-mail-editor');
+  if (editor) editor.innerHTML = '';
+
+  const hiddenImg = modal.querySelector('input[name="image_data"]');
+  if (hiddenImg) hiddenImg.value = '';
+
+  // 4) Limpiar mensaje oculto
+  const hiddenMsg = document.getElementById(`mensaje-rechazo-${id}`);
+  if (hiddenMsg) hiddenMsg.value = '';
+
+  // 5) Cerrar modal
+  modal.style.display = "none";
   }
 
-  // let file = undefined;
+   // 1) Convierte un File (imagen) a un Data URL (Base64)
+  function fileToDataURL(file) {
+    return new Promise((resolve, reject) => {
+      const fr = new FileReader();
+      // Cuando termina de leer, fr.result contiene: "data:image/png;base64,AAAA..."
+      fr.onload = () => resolve(fr.result);
+      fr.onerror = reject;
+      fr.readAsDataURL(file);// Lee el archivo como Data URL
+    });
+  }
 
-  // //funcion de la imagen
-  // function DataURIToBlob(dataURI) {
-  //   const splitDataURI = dataURI.split(",");
-  //   const byteString =
-  //     splitDataURI[0].indexOf("base64") >= 0
-  //       ? atob(splitDataURI[1])
-  //       : decodeURI(splitDataURI[1]);
-  //   const mimeString = splitDataURI[0].split(":")[1].split(";")[0];
+  // 2) Conecta eventos de pegar y arrastrar/soltar a un editor
+  //    y guarda el resultado en un <input type="hidden" name="image_data">
+  //    que está dentro del mismo modal.
+  function attachImageHandlers(editor) {
+    // Ubicamos el "modal padre" del editor, para no mezclar inputs entre modales
+    // Busca un ancestro cuyo id empiece con "modal" (p.ej. "modal-123" o "modal-reject-45")
+    const modal = editor.closest('[id^="modal"]');
+    if (!modal) return;
+    // Dentro del modal, buscamos el input hidden que almacenará el Base64 de la imagen
+    const hidden = modal.querySelector('input[name="image_data"]');
+    if (!hidden) return;
 
-  //   const ia = new Uint8Array(byteString.length);
-  //   for (let i = 0; i < byteString.length; i++)
-  //     ia[i] = byteString.charCodeAt(i);
+   // --- PEGAR (Ctrl+V) una imagen dentro del editor ---
+    editor.addEventListener('paste', async (e) => {
+      // Clipboard puede traer varios items; buscamos el que sea imagen
+      const items = e.clipboardData?.items || [];
+      for (const it of items) {
+        if (it.kind === 'file' && it.type.startsWith('image/')) {
+          e.preventDefault();
+          const file = it.getAsFile();
+          const dataURL = await fileToDataURL(file);// Convertimos a Base64
 
-  //   return new Blob([ia], { type: mimeString });
-  // }
+          // Mostramos una previsualización dentro del editor
+          const img = document.createElement('img');
+          img.src = dataURL;
+          img.style.maxWidth = '100%';
+          img.style.height = 'auto';
+          editor.appendChild(img);
 
-  // let change = async (target) => {
-  //   let image = target.querySelector("img");
-  //   if (image) {
-  //     file = await DataURIToBlob(image.src);
-  //     console.log(file);
-  //   }
-  // };
+          // Guardamos el Base64 en el hidden, listo para enviar al backend
+          hidden.value = dataURL; // listo para enviar
+          break; // Solo tomamos la primera imagen
+        }
+      }
+    });
+
+     // --- Permite arrastrar encima del editor sin que el navegador abra el archivo ---
+    editor.addEventListener('dragover', (e) => e.preventDefault());
+     // --- Suelta/Drop de una imagen dentro del editor ---
+    editor.addEventListener('drop', async (e) => {
+      e.preventDefault();
+      const file = e.dataTransfer?.files?.[0];// Tomamos el primer archivo soltado
+      if (file && file.type.startsWith('image/')) {
+        const dataURL = await fileToDataURL(file);
+
+         // Mostramos la imagen en el editor
+        const img = document.createElement('img');
+        img.src = dataURL;
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+        editor.appendChild(img);
+
+        // Guardamos el Base64 para el envío por formulario
+        hidden.value = dataURL;
+      }
+    });
+  }
+
+  // Bind genérico a TODOS los editores de todos los modales
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.js-mail-editor').forEach(attachImageHandlers);
+  });
+
+
+
 </script>
 
 {% endblock %}

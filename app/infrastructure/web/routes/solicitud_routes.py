@@ -77,6 +77,7 @@ def aprobar(solicitud_id: int):
     usuario_actual = session.get("username")
     mensaje = request.form.get("mensaje", "").strip()
     destinatario = request.form.get("destinatario", "").strip()
+    image_data = request.form.get("image_data")
     try:
         solicitud_service.aprobar(solicitud_id, usuario_actual)
         
@@ -84,7 +85,8 @@ def aprobar(solicitud_id: int):
             send_email(
                 to=destinatario,
                 subject="Respuesta a su solicitud",
-                body=mensaje
+                body=mensaje,
+                image_data=image_data or None
             )
         flash("Solicitud aprobada y correo enviado.", "success")
     except Exception as e:
@@ -98,7 +100,7 @@ def desaprobar(solicitud_id: int):
     usuario_actual = session.get("username")
     mensaje = request.form.get("mensaje", "").strip()
     destinatario = request.form.get("destinatario", "").strip()
-    
+    image_data = request.form.get("image_data")
     
 
     try:
@@ -110,7 +112,8 @@ def desaprobar(solicitud_id: int):
             send_email(
                 to=destinatario,
                 subject="Respuesta a su solicitud",
-                body=mensaje
+                body=mensaje,
+                image_data=image_data or None
             )
         flash("Solicitud desaprobada y correo enviado.", "success")
     except Exception as e:

@@ -7,7 +7,15 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/tailwind.css') }}"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Toastify CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
   </head>
   <body class="bg-ligth-400">
     <div class="flex min-h-screen">
@@ -18,9 +26,43 @@
         <!-- Navbar -->
         {% include 'components/navbar.html' %}
         <!-- Contenido principal -->
-        <main class="flex-1 ml-64 flex justify-center items-start p-8">{% block content %}{% endblock %}</main>
+        <main class="flex-1 ml-64 flex justify-center items-start p-8">
+          {% block content %}{% endblock %}
+        </main>
       </div>
     </div>
-  </body>
 
+    <!-- Toastify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <script>
+      window.FLASH_MESSAGES = {{ messages | tojson }};
+    </script>
+    {% endwith %}
+
+    <script>
+      const colors = {
+        success: "#16a34a", // verde
+        danger: "#dc2626", // rojo
+        error: "#dc2626", // rojo
+        warning: "#ca8a04", // amarillo
+        info: "#2563eb", // azul
+      };
+
+      (function renderFlashes() {
+        (window.FLASH_MESSAGES || []).forEach(([category, msg]) => {
+          Toastify({
+            text: msg,
+            duration: 4000,
+            close: true,
+            gravity: "top", 
+            position: "right",
+            stopOnFocus: true,
+            style: { background: colors[category] || colors.info },
+          }).showToast();
+        });
+      })();
+    </script>
+  </body>
 </html>

@@ -59,14 +59,6 @@ def user_create():
             flash(f"Error al crear el usuario: {str(e)}", "danger")
 
     tipos_usuario = listar_tipos_usuario.execute()
-    new_tipos_usuarios = []
-    # for items in tipos_usuario:
-    #     new_tipos_usuarios.append({
-    #         "id": items.tipo_usuario_id,
-    #         "value": items.nombre
-    #     })
-    
-
     
     tipos_usuario = [{"id": item.tipo_usuario_id, "value": item.nombre} for item in tipos_usuario]
     return render_template("user_create.html", tipos_usuario=tipos_usuario)

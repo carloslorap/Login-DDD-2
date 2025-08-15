@@ -1077,6 +1077,15 @@
         "documentation": {}
     },
     {
+        "label": "base64,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64.",
+        "description": "base64.",
+        "detail": "base64.",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "importPath": "app.infrastructure.db.connection",
         "description": "app.infrastructure.db.connection",
@@ -1639,7 +1648,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.db.connection",
         "description": "app.infrastructure.db.connection",
-        "peekOfCode": "engine = create_engine(\n    settings.SQLALCHEMY_DATABASE_URL,\n    echo=True,  # para ver las queries en consola (puedes quitarlo en producción)\n    future=True\n)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()",
+        "peekOfCode": "engine = create_engine(\n    settings.SQLALCHEMY_DATABASE_URL,\n    echo=False,\n    future=True\n)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()",
         "detail": "app.infrastructure.db.connection",
         "documentation": {}
     },
@@ -1666,7 +1675,7 @@
         "kind": 2,
         "importPath": "app.infrastructure.email.mailer",
         "description": "app.infrastructure.email.mailer",
-        "peekOfCode": "def send_email(to: str, subject: str, body: str) -> None:\n    msg = Message(subject=subject, recipients=[to], body=body)\n    mail.send(msg)",
+        "peekOfCode": "def send_email(to: str, subject: str, body: str, image_data: str | None = None) -> None:\n    msg = Message(subject=subject, recipients=[to], body=body)\n       # Si viene una imagen como dataURL, la adjuntamos\n    if image_data and image_data.startswith(\"data:\"):\n        header, b64 = image_data.split(\",\", 1)\n        m = re.match(r\"data:(.*?);base64\", header)\n        mime = m.group(1) if m else \"application/octet-stream\"\n        ext = (mime.split(\"/\")[-1] or \"bin\")\n        data = base64.b64decode(b64)\n        msg.attach(filename=f\"adjunto.{ext}\", content_type=mime, data=data)",
         "detail": "app.infrastructure.email.mailer",
         "documentation": {}
     },
@@ -1837,7 +1846,7 @@
         "kind": 2,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "def aprobar(solicitud_id: int):\n    usuario_actual = session.get(\"username\")\n    try:\n        solicitud_service.aprobar(solicitud_id, usuario_actual)\n        flash(\"Solicitud aprobada correctamente.\", \"success\")\n    except Exception as e:\n        flash(f\"Error al aprobar: {e}\", \"danger\")\n    return redirect(url_for(\"solicitudes.listar_solicitudes\"))\n@solicitudes_bp.route(\"/solicitudes/<int:solicitud_id>/desaprobar\", methods=[\"POST\"])\n@login_required",
+        "peekOfCode": "def aprobar(solicitud_id: int):\n    usuario_actual = session.get(\"username\")\n    mensaje = request.form.get(\"mensaje\", \"\").strip()\n    destinatario = request.form.get(\"destinatario\", \"\").strip()\n    image_data = request.form.get(\"image_data\")\n    try:\n        solicitud_service.aprobar(solicitud_id, usuario_actual)\n        if destinatario and mensaje:\n            send_email(\n                to=destinatario,",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1846,7 +1855,7 @@
         "kind": 2,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "def desaprobar(solicitud_id: int):\n    usuario_actual = session.get(\"username\") or \"sistema\"\n    mensaje = request.form.get(\"mensaje\", \"\").strip()\n    destinatario = request.form.get(\"destinatario\", \"\").strip()\n    try:\n        # 1) Actualiza estado en BD\n        solicitud_service.desaprobar(solicitud_id, usuario_actual)\n        # 2) Envía email si hay destinatario y mensaje\n        if destinatario and mensaje:\n            send_email(",
+        "peekOfCode": "def desaprobar(solicitud_id: int):\n    usuario_actual = session.get(\"username\")\n    mensaje = request.form.get(\"mensaje\", \"\").strip()\n    destinatario = request.form.get(\"destinatario\", \"\").strip()\n    image_data = request.form.get(\"image_data\")\n    try:\n        # 1) Actualiza estado en BD\n        solicitud_service.desaprobar(solicitud_id, usuario_actual)\n        # 2) Envía email si hay destinatario y mensaje\n        if destinatario and mensaje:",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
