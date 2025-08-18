@@ -6,25 +6,25 @@ block content %}
 <div class="max-w-[var(--container-width)] w-full bg-white p-8 rounded-lg shadow-md">
   <h2 class="text-2xl font-bold mb-6">Crear Usuario</h2>
 
-  <form method="POST">
+  <form method="POST" novalidate>
     <div class="grid grid-cols-2 gap-4">
       <!-- Nombre -->
-      {{ input.input_field('nombres', type='text', placeholder='Escribe tu nombre',label='Nombre') }}
+      {{ input.input_field('nombres', type='text', placeholder='Escribe tu nombre',label='Nombre',error=errors.get('nombres')) }}
 
       <!-- Apellido Paterno -->
-      {{ input.input_field('ap_paterno', type='text', placeholder='Escribe tu apellido paterno',label='Apellido Parteno') }}
+      {{ input.input_field('ap_paterno', type='text', placeholder='Escribe tu apellido paterno',label='Apellido Parteno',error=errors.get('ap_paterno')) }}
 
       <!-- Apellido Materno -->
-      {{ input.input_field('ap_materno', type='text', placeholder='Escribe tu apellido materno',label='Apellido Marteno') }}
+      {{ input.input_field('ap_materno', type='text', placeholder='Escribe tu apellido materno',label='Apellido Marteno',error=errors.get('ap_materno')) }}
 
       <!-- Usuario -->
-      {{ input.input_field('usuario', type='text', placeholder='Escribe tu usuario',label='Usuario') }}
+      {{ input.input_field('usuario', type='text', placeholder='Escribe tu usuario',label='Usuario',error=errors.get('usuario')) }}
 
       <!-- Contraseña -->
-      {{ input.input_field('contrasena', type='password', placeholder='Escribe tu contraseña',label='Contraseña') }}
+      {{ input.input_field('contrasena', type='password', placeholder='Escribe tu contraseña',label='Contraseña',error=errors.get('contrasena')) }}
 
       <!-- Repetir Contraseña -->
-      {{ input.input_field('repetir_contrasena', type='password' ,placeholder='Repite la contraseña',label='Repetir contraseña') }}
+      {{ input.input_field('repetir_contrasena', type='password' ,placeholder='Repite la contraseña',label='Repetir contraseña',error=errors.get('repetir_contrasena')) }}
 
       <!-- Tipo de Usuario -->
       {{ select.select_field('tipo_usuario',options=tipos_usuario, label='Tipo de Usuario') }}

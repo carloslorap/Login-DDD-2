@@ -1,71 +1,59 @@
 {% extends 'layout/base.html' %}
-
 {% block title %}Dashboard{% endblock %}
-
 {% block content %}
 
-<div class="max-w-[var(--container-width)] w-full bg-ligth-500 p-8 rounded-lg shadow">
+<div class="w-full max-w-[var(--container-width)]">
+  <h1 class="text-2xl font-bold text-gray-800 mb-6">Dashboard</h1>
 
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Total solicitudes -->
+    <div class="bg-ligth-500 rounded-lg shadow p-5 border-l-6 border-primary-300">
+      <div class="flex items-center justify-between">
+        <h3 class="text-sm font-bold  text-gray-dark">Total de Solicitudes</h3>
+        <span class="material-symbols-outlined text-primary-300">clinical_notes</span>
+      </div>
+      <p class="mt-2 text-3xl font-extrabold text-dark-500">
+        {{ stats.total_solicitudes }}
+      </p>
+      <p class="mt-1 text-xs text-dark-100">Registradas (activas)</p>
+    </div>
 
-    <table class="w-full bg-light border border-gray-200">
-        <thead class="bg-primary text-white">
-            <tr>
+    <!-- Pendientes -->
+    <div class="bg-ligth-500 rounded-lg shadow p-5 border-l-6 border-warning">
+      <div class="flex items-center justify-between">
+        <h3 class="text-sm font-bold  text-gray-dark">Pendientes</h3>
+        <span class="material-symbols-outlined text-warning">schedule</span>
+      </div>
+      <p class="mt-2 text-3xl font-extrabold text-dark-500">
+        {{ stats.total_pendientes }}
+      </p>
+      <p class="mt-1 text-xs text-dark-100">En revisión</p>
+    </div>
 
-                <th class="px-4 py-2 text-left text-light">
-                    Nombres
-                </th>
-                <th class="px-4 py-2 text-left text-light">
-                    Telefono
-                </th>
-                <th class="px-4 py-2 text-left text-light">
-                    Documento
-                </th>
-                <th class="px-4 py-2 text-left text-light">
-                    Email
-                </th>
-                <th class="px-4 py-2 text-left text-light">
-                    Especialidad
-                </th>
-                <th class="px-4 py-2 text-left text-light">
-                    Continuador
-                </th>
-                 <th class="px-4 py-2 text-left text-light">
-                    Sis
-                </th>
-                 <th class="px-4 py-2 text-left text-light">
-                    Interconsulta
-                </th>
-                 <th class="px-4 py-2 text-left text-light">
-                    Fecha
-                </th>
-                 <th class="px-4 py-2 text-left text-light">
-                    Estado
-                </th>
-                 <th class="px-4 py-2 text-left text-light">
-                    Opcion
-                </th>
+    <!-- Atendidas -->
+    <div class="bg-white rounded-lg shadow p-5 border-l-6 border-success">
+      <div class="flex items-center justify-between">
+        <h3 class="text-sm font-bold  text-gray-dark">Atendidas</h3>
+        <span class="material-symbols-outlined text-success">task_alt</span>
+      </div>
+      <p class="mt-2 text-3xl font-extrabold text-dark-500">
+        {{ stats.total_atendidas }}
+      </p>
+      <p class="mt-1 text-xs text-dark-100">Aprobadas/Rechazadas</p>
+    </div>
 
-
-                <th class="px-4 py-2 text-left text-light">Acciones</th>
-            </tr>
-        </thead>
-
-        <tbody>
-
-            <tr class="border-t border-gray-200 hover:bg-hover-grey text-dark">
-
-                <td class="px-4 py-2">
-                    njdffdf
-                </td>
-
-                <td class="px-4 py-2">dsfdfgfdgfdgfdg</td>
-
-            </tr>
-
-
-
-        </tbody>
-    </table>
-
+    <!-- Usuarios activos -->
+    <div class="bg-ligth-500 rounded-lg shadow p-5 border-l-6 border-primary-100">
+      <div class="flex items-center justify-between">
+        <h3 class="text-sm font-bold  text-gray-dark">Usuarios Activos</h3>
+        <span class="material-symbols-outlined text-primary-100">group</span>
+      </div>
+      <p class="mt-2 text-3xl font-extrabold text-dark-500">
+        {{ stats.usuarios_activos }}
+      </p>
+      <p class="mt-1 text-xs text-dark-100">Con acceso habilitado</p>
+    </div>
+  </div>
 </div>
+
 {% endblock %}

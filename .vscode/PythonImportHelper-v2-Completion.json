@@ -92,6 +92,278 @@
         "documentation": {}
     },
     {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -181,6 +453,14 @@
     },
     {
         "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -237,6 +517,14 @@
     },
     {
         "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -473,214 +761,6 @@
         "description": "functools",
         "isExtraImport": true,
         "detail": "functools",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "url_for",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "flash",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Blueprint",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "url_for",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "flash",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Blueprint",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "flash",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "url_for",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Blueprint",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "url_for",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "flash",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
         "documentation": {}
     },
     {
@@ -1077,12 +1157,21 @@
         "documentation": {}
     },
     {
-        "label": "base64,",
+        "label": "base64",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "base64.",
-        "description": "base64.",
-        "detail": "base64.",
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
         "documentation": {}
     },
     {
@@ -1111,6 +1200,14 @@
     },
     {
         "label": "Base",
+        "importPath": "app.infrastructure.db.connection",
+        "description": "app.infrastructure.db.connection",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.db.connection",
+        "documentation": {}
+    },
+    {
+        "label": "SessionLocal",
         "importPath": "app.infrastructure.db.connection",
         "description": "app.infrastructure.db.connection",
         "isExtraImport": true,
@@ -1174,6 +1271,14 @@
         "documentation": {}
     },
     {
+        "label": "Usuario",
+        "importPath": "app.infrastructure.models.user_model",
+        "description": "app.infrastructure.models.user_model",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.models.user_model",
+        "documentation": {}
+    },
+    {
         "label": "TipoUsuario",
         "importPath": "app.infrastructure.models.user_model",
         "description": "app.infrastructure.models.user_model",
@@ -1190,11 +1295,11 @@
         "documentation": {}
     },
     {
-        "label": "RespuestaSolicitudModel",
-        "importPath": "app.infrastructure.models.respuesta_solicitud_model",
-        "description": "app.infrastructure.models.respuesta_solicitud_model",
+        "label": "SolicitudModel",
+        "importPath": "app.infrastructure.models.solicitud_model",
+        "description": "app.infrastructure.models.solicitud_model",
         "isExtraImport": true,
-        "detail": "app.infrastructure.models.respuesta_solicitud_model",
+        "detail": "app.infrastructure.models.solicitud_model",
         "documentation": {}
     },
     {
@@ -1203,6 +1308,14 @@
         "description": "app.infrastructure.models.solicitud_model",
         "isExtraImport": true,
         "detail": "app.infrastructure.models.solicitud_model",
+        "documentation": {}
+    },
+    {
+        "label": "RespuestaSolicitudModel",
+        "importPath": "app.infrastructure.models.respuesta_solicitud_model",
+        "description": "app.infrastructure.models.respuesta_solicitud_model",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.models.respuesta_solicitud_model",
         "documentation": {}
     },
     {
@@ -1222,19 +1335,19 @@
         "documentation": {}
     },
     {
+        "label": "AuthRepositoryImpl",
+        "importPath": "app.infrastructure.repositories.auth.auth_repository_impl",
+        "description": "app.infrastructure.repositories.auth.auth_repository_impl",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.repositories.auth.auth_repository_impl",
+        "documentation": {}
+    },
+    {
         "label": "LoginUser",
         "importPath": "app.application.auth.login_user",
         "description": "app.application.auth.login_user",
         "isExtraImport": true,
         "detail": "app.application.auth.login_user",
-        "documentation": {}
-    },
-    {
-        "label": "login_required",
-        "importPath": "app.decorators.protection",
-        "description": "app.decorators.protection",
-        "isExtraImport": true,
-        "detail": "app.decorators.protection",
         "documentation": {}
     },
     {
@@ -1254,6 +1367,14 @@
         "documentation": {}
     },
     {
+        "label": "roles_required",
+        "importPath": "app.decorators.protection",
+        "description": "app.decorators.protection",
+        "isExtraImport": true,
+        "detail": "app.decorators.protection",
+        "documentation": {}
+    },
+    {
         "label": "login_required",
         "importPath": "app.decorators.protection",
         "description": "app.decorators.protection",
@@ -1262,11 +1383,115 @@
         "documentation": {}
     },
     {
+        "label": "roles_required",
+        "importPath": "app.decorators.protection",
+        "description": "app.decorators.protection",
+        "isExtraImport": true,
+        "detail": "app.decorators.protection",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "app.decorators.protection",
+        "description": "app.decorators.protection",
+        "isExtraImport": true,
+        "detail": "app.decorators.protection",
+        "documentation": {}
+    },
+    {
+        "label": "roles_required",
+        "importPath": "app.decorators.protection",
+        "description": "app.decorators.protection",
+        "isExtraImport": true,
+        "detail": "app.decorators.protection",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_ADMIN",
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "isExtraImport": true,
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_ADMIN",
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "isExtraImport": true,
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_NORMAL",
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "isExtraImport": true,
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_ADMIN",
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "isExtraImport": true,
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_NORMAL",
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "isExtraImport": true,
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_ADMIN",
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "isExtraImport": true,
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_NORMAL",
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "isExtraImport": true,
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "has_role",
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "isExtraImport": true,
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "DashboardStatsRepository",
+        "importPath": "app.infrastructure.repositories.dashboard.dashboard_repository",
+        "description": "app.infrastructure.repositories.dashboard.dashboard_repository",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.repositories.dashboard.dashboard_repository",
+        "documentation": {}
+    },
+    {
         "label": "ceil",
         "importPath": "math",
         "description": "math",
         "isExtraImport": true,
         "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "send_templated_email",
+        "importPath": "app.infrastructure.email.mailer",
+        "description": "app.infrastructure.email.mailer",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.email.mailer",
         "documentation": {}
     },
     {
@@ -1299,14 +1524,6 @@
         "description": "app.application.solicitud.respuesta_solicitud_service",
         "isExtraImport": true,
         "detail": "app.application.solicitud.respuesta_solicitud_service",
-        "documentation": {}
-    },
-    {
-        "label": "send_email",
-        "importPath": "app.infrastructure.email.mailer",
-        "description": "app.infrastructure.email.mailer",
-        "isExtraImport": true,
-        "detail": "app.infrastructure.email.mailer",
         "documentation": {}
     },
     {
@@ -1351,6 +1568,22 @@
         "documentation": {}
     },
     {
+        "label": "BadSignature",
+        "importPath": "itsdangerous",
+        "description": "itsdangerous",
+        "isExtraImport": true,
+        "detail": "itsdangerous",
+        "documentation": {}
+    },
+    {
+        "label": "BadTimeSignature",
+        "importPath": "itsdangerous",
+        "description": "itsdangerous",
+        "isExtraImport": true,
+        "detail": "itsdangerous",
+        "documentation": {}
+    },
+    {
         "label": "CORS",
         "importPath": "flask_cors",
         "description": "flask_cors",
@@ -1380,6 +1613,30 @@
         "description": "app.infrastructure.web.routes.solicitud_routes",
         "isExtraImport": true,
         "detail": "app.infrastructure.web.routes.solicitud_routes",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard_bp",
+        "importPath": "app.infrastructure.web.routes.dashboard_routes",
+        "description": "app.infrastructure.web.routes.dashboard_routes",
+        "isExtraImport": true,
+        "detail": "app.infrastructure.web.routes.dashboard_routes",
+        "documentation": {}
+    },
+    {
+        "label": "inject_role_helpers",
+        "importPath": "app.web.context",
+        "description": "app.web.context",
+        "isExtraImport": true,
+        "detail": "app.web.context",
+        "documentation": {}
+    },
+    {
+        "label": "register_session_sanitizer",
+        "importPath": "app.web.middleware",
+        "description": "app.web.middleware",
+        "isExtraImport": true,
+        "detail": "app.web.middleware",
         "documentation": {}
     },
     {
@@ -1513,7 +1770,7 @@
         "kind": 6,
         "importPath": "app.config.settings",
         "description": "app.config.settings",
-        "peekOfCode": "class Settings:\n    SQLALCHEMY_DATABASE_URL = os.getenv(\"DATABASE_URL\")\n    SMTP_HOST = os.getenv(\"SMTP_HOST\", \"\")\n    SMTP_PORT = int(os.getenv(\"SMTP_PORT\", \"587\"))\n    SMTP_USER = os.getenv(\"SMTP_USER\", \"\")\n    SMTP_PASS = os.getenv(\"SMTP_PASS\", \"\")\n    SMTP_FROM = os.getenv(\"SMTP_FROM\", SMTP_USER)\n    SMTP_USE_TLS = os.getenv(\"SMTP_USE_TLS\", \"true\").lower() == \"true\"\nsettings = Settings()",
+        "peekOfCode": "class Settings:\n    SQLALCHEMY_DATABASE_URL = os.getenv(\"DATABASE_URL\")\n    SMTP_HOST = os.getenv(\"SMTP_HOST\", \"\")\n    SMTP_PORT = int(os.getenv(\"SMTP_PORT\", \"587\"))\n    SMTP_USER = os.getenv(\"SMTP_USER\", \"\")\n    SMTP_PASS = os.getenv(\"SMTP_PASS\", \"\")\n    SMTP_FROM = os.getenv(\"SMTP_FROM\", SMTP_USER)\n    SMTP_USE_TLS = os.getenv(\"SMTP_USE_TLS\", \"true\").lower() == \"true\"\n    SECRET_KEY = os.getenv(\"SECRET_KEY\")\nsettings = Settings()",
         "detail": "app.config.settings",
         "documentation": {}
     },
@@ -1527,11 +1784,38 @@
         "documentation": {}
     },
     {
+        "label": "has_role",
+        "kind": 2,
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "peekOfCode": "def has_role(session, *roles) -> bool:\n    \"\"\"True si el usuario en sesión tiene alguno de los roles.\"\"\"\n    return session.get(\"tipo_usuario_id\") in roles",
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_ADMIN",
+        "kind": 5,
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "peekOfCode": "ROLE_ADMIN = 1\nROLE_NORMAL = 2\ndef has_role(session, *roles) -> bool:\n    \"\"\"True si el usuario en sesión tiene alguno de los roles.\"\"\"\n    return session.get(\"tipo_usuario_id\") in roles",
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_NORMAL",
+        "kind": 5,
+        "importPath": "app.core.roles",
+        "description": "app.core.roles",
+        "peekOfCode": "ROLE_NORMAL = 2\ndef has_role(session, *roles) -> bool:\n    \"\"\"True si el usuario en sesión tiene alguno de los roles.\"\"\"\n    return session.get(\"tipo_usuario_id\") in roles",
+        "detail": "app.core.roles",
+        "documentation": {}
+    },
+    {
         "label": "login_required",
         "kind": 2,
         "importPath": "app.decorators.protection",
         "description": "app.decorators.protection",
-        "peekOfCode": "def login_required(f):\n    @wraps(f)\n    def decorated_function(*args, **kwargs):\n        if session.get(\"user_id\") is None:\n            flash(\"Debes iniciar sesión primero.\")\n            return redirect(url_for(\"auth.login\")) \n        return f(*args, **kwargs)\n    return decorated_function\ndef isLoginReady(f):\n    @wraps(f)",
+        "peekOfCode": "def login_required(f):\n    @wraps(f)\n    def decorated_function(*args, **kwargs):\n        if session.get(\"user_id\") is None:\n            return redirect(url_for(\"auth.login\")) \n        return f(*args, **kwargs)\n    return decorated_function\ndef isLoginReady(f):\n    @wraps(f)\n    def decorated_function(*args, **kwargs):",
         "detail": "app.decorators.protection",
         "documentation": {}
     },
@@ -1540,7 +1824,16 @@
         "kind": 2,
         "importPath": "app.decorators.protection",
         "description": "app.decorators.protection",
-        "peekOfCode": "def isLoginReady(f):\n    @wraps(f)\n    def decorated_function(*args, **kwargs):\n        if session.get(\"user_id\") is not None:\n            flash(\"Ya iniciaste sesion.\")\n            return redirect(url_for(\"auth.dashboard\"))  \n        return f(*args, **kwargs)\n    return decorated_function",
+        "peekOfCode": "def isLoginReady(f):\n    @wraps(f)\n    def decorated_function(*args, **kwargs):\n        if session.get(\"user_id\") is not None:\n            flash(\"Ya iniciaste sesion.\")\n            return redirect(url_for(\"solicitudes.listar_solicitudes\"))  \n        return f(*args, **kwargs)\n    return decorated_function\ndef roles_required(*allowed_roles):\n    def decorator(f):",
+        "detail": "app.decorators.protection",
+        "documentation": {}
+    },
+    {
+        "label": "roles_required",
+        "kind": 2,
+        "importPath": "app.decorators.protection",
+        "description": "app.decorators.protection",
+        "peekOfCode": "def roles_required(*allowed_roles):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):\n            user_role = session.get(\"tipo_usuario_id\")\n            if user_role is None:\n                # no autenticado -> login_required ya se encargará en esa ruta\n                abort(401)\n            if user_role not in allowed_roles:\n                # autenticado pero sin permiso -> 403, no redirigir",
         "detail": "app.decorators.protection",
         "documentation": {}
     },
@@ -1549,7 +1842,7 @@
         "kind": 6,
         "importPath": "app.domain.auth.auth",
         "description": "app.domain.auth.auth",
-        "peekOfCode": "class Auth:\n    usuario_id: int\n    usuario: str               \n    contrasena: str",
+        "peekOfCode": "class Auth:\n    usuario_id: int\n    nombres: str\n    ap_paterno: str\n    ap_materno: str\n    usuario: str               \n    contrasena: str\n    tipo_usuario_id:bool     \n    @property\n    def full_name(self) -> str:",
         "detail": "app.domain.auth.auth",
         "documentation": {}
     },
@@ -1558,7 +1851,7 @@
         "kind": 6,
         "importPath": "app.domain.auth.auth_repository",
         "description": "app.domain.auth.auth_repository",
-        "peekOfCode": "class AuthRepository(ABC):\n    @abstractmethod\n    def get_by_username(self, username: str) -> Optional[Auth]:\n        pass\n    # @abstractmethod\n    # def create_user(self, user: User) -> User:\n    #     pass\n    # @abstractmethod|\n    # def save(self, user: User) -> User:\n    #     pass",
+        "peekOfCode": "class AuthRepository(ABC):\n    @abstractmethod\n    def get_by_username(self, username: str) -> Optional[Auth]:\n        pass\n    # @abstractmethod|\n    # def save(self, user: User) -> User:\n    #     pass",
         "detail": "app.domain.auth.auth_repository",
         "documentation": {}
     },
@@ -1630,7 +1923,7 @@
         "kind": 6,
         "importPath": "app.domain.user.usuario_repository",
         "description": "app.domain.user.usuario_repository",
-        "peekOfCode": "class UserRepository(ABC):\n     @abstractmethod\n     def create_user(self, user: User) -> User:\n        pass",
+        "peekOfCode": "class UserRepository(ABC):\n    @abstractmethod\n    def create_user(self, user: User) -> User:\n        pass\n    @abstractmethod\n    def get_by_id(self, user_id: int) -> Optional[User]:\n        \"\"\"Devuelve el usuario (incluye hash de contraseña) o None.\"\"\"\n        pass\n    @abstractmethod\n    def update_password(self, user_id: int, hashed_password: str) -> None:",
         "detail": "app.domain.user.usuario_repository",
         "documentation": {}
     },
@@ -1671,11 +1964,11 @@
         "documentation": {}
     },
     {
-        "label": "send_email",
+        "label": "send_templated_email",
         "kind": 2,
         "importPath": "app.infrastructure.email.mailer",
         "description": "app.infrastructure.email.mailer",
-        "peekOfCode": "def send_email(to: str, subject: str, body: str, image_data: str | None = None) -> None:\n    msg = Message(subject=subject, recipients=[to], body=body)\n       # Si viene una imagen como dataURL, la adjuntamos\n    if image_data and image_data.startswith(\"data:\"):\n        header, b64 = image_data.split(\",\", 1)\n        m = re.match(r\"data:(.*?);base64\", header)\n        mime = m.group(1) if m else \"application/octet-stream\"\n        ext = (mime.split(\"/\")[-1] or \"bin\")\n        data = base64.b64decode(b64)\n        msg.attach(filename=f\"adjunto.{ext}\", content_type=mime, data=data)",
+        "peekOfCode": "def send_templated_email(to: str,\n                         subject: str,\n                         *,\n                         template_name: str = \"email/SendAnswer.html\",\n                         context: dict = None,\n                         image_data_url: str | None = None,\n                         image_cid: str = \"adj-1\",\n                         text_fallback: str | None = None):\n    \"\"\"\n    Envía un email con plantilla HTML Jinja.",
         "detail": "app.infrastructure.email.mailer",
         "documentation": {}
     },
@@ -1729,8 +2022,17 @@
         "kind": 6,
         "importPath": "app.infrastructure.repositories.auth.auth_repository_impl",
         "description": "app.infrastructure.repositories.auth.auth_repository_impl",
-        "peekOfCode": "class AuthRepositoryImpl(AuthRepository):\n    def get_by_username(self, username: str) -> Optional[Auth]:\n        with SessionLocal() as db:\n            user_row = db.query(Usuario).filter(Usuario.usuario == username).first()\n            if user_row:\n                return Auth(\n                    usuario_id=user_row.usuario_id,\n                    usuario=user_row.usuario,\n                    contrasena=user_row.contrasena,\n                )",
+        "peekOfCode": "class AuthRepositoryImpl(AuthRepository):\n    def get_by_username(self, username: str) -> Optional[Auth]:\n        with SessionLocal() as db:\n            user_row = db.query(Usuario).filter(Usuario.usuario == username).first()\n            if user_row:\n                return Auth(\n                    nombres = user_row.nombres,\n                    ap_materno=user_row.ap_materno,\n                    ap_paterno=user_row.ap_paterno,\n                    usuario_id=user_row.usuario_id,",
         "detail": "app.infrastructure.repositories.auth.auth_repository_impl",
+        "documentation": {}
+    },
+    {
+        "label": "DashboardStatsRepository",
+        "kind": 6,
+        "importPath": "app.infrastructure.repositories.dashboard.dashboard_repository",
+        "description": "app.infrastructure.repositories.dashboard.dashboard_repository",
+        "peekOfCode": "class DashboardStatsRepository:\n    def get_stats(self) -> dict:\n        \"\"\"\n        Devuelve:\n          - total_solicitudes: todas las solicitudes activas (estado=True)\n          - total_pendientes: solicitudes activas con atendido == 0\n          - total_atendidas: solicitudes activas con atendido == 1\n          - usuarios_activos: usuarios con estado=True\n        \"\"\"\n        with SessionLocal() as db:",
+        "detail": "app.infrastructure.repositories.dashboard.dashboard_repository",
         "documentation": {}
     },
     {
@@ -1774,16 +2076,7 @@
         "kind": 2,
         "importPath": "app.infrastructure.web.routes.auth_routes",
         "description": "app.infrastructure.web.routes.auth_routes",
-        "peekOfCode": "def login():\n    if request.method == \"POST\":\n        username = request.form.get(\"username\") \n        password = request.form.get(\"password\")\n        try:\n            user = login_use_case.execute(username, password) \n            session[\"user_id\"] = user.usuario_id\n            session[\"username\"] = user.usuario  \n            return redirect(url_for(\"auth.dashboard\"))\n        except ValueError as e:",
-        "detail": "app.infrastructure.web.routes.auth_routes",
-        "documentation": {}
-    },
-    {
-        "label": "dashboard",
-        "kind": 2,
-        "importPath": "app.infrastructure.web.routes.auth_routes",
-        "description": "app.infrastructure.web.routes.auth_routes",
-        "peekOfCode": "def dashboard():\n    return render_template(\"dashboard.html\")\n@auth_bp.route(\"/logout\", methods=[\"GET\"])\ndef logout():\n    session.clear()\n    return redirect(url_for(\"auth.login\"))",
+        "peekOfCode": "def login():\n    errors = {}\n    form = {\"username\": \"\", \"contrasena\": \"\"}\n    if request.method == \"POST\":\n        # leer y normalizar\n        form[\"username\"] = (request.form.get(\"username\") or \"\").strip()\n        form[\"contrasena\"] = request.form.get(\"contrasena\") or \"\"\n        # validaciones\n        if not form[\"username\"]:\n            errors[\"username\"] = \"El usuario es obligatorio.\"",
         "detail": "app.infrastructure.web.routes.auth_routes",
         "documentation": {}
     },
@@ -1792,7 +2085,7 @@
         "kind": 2,
         "importPath": "app.infrastructure.web.routes.auth_routes",
         "description": "app.infrastructure.web.routes.auth_routes",
-        "peekOfCode": "def logout():\n    session.clear()\n    return redirect(url_for(\"auth.login\"))",
+        "peekOfCode": "def logout():\n    session.clear()\n    flash(\"Sesión cerrada exitosamente\",\"info\")\n    return redirect(url_for(\"auth.login\"))",
         "detail": "app.infrastructure.web.routes.auth_routes",
         "documentation": {}
     },
@@ -1801,7 +2094,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.auth_routes",
         "description": "app.infrastructure.web.routes.auth_routes",
-        "peekOfCode": "auth_bp = Blueprint(\"auth\", __name__, template_folder=\"../templates\")\n# Instancias compartidas\nauth_repository = AuthRepositoryImpl()\npassword_hasher = PasswordHasher()\nlogin_use_case = LoginUser(auth_repository, password_hasher)\n@auth_bp.route(\"/login\", methods=[\"GET\", \"POST\"])\n@isLoginReady\ndef login():\n    if request.method == \"POST\":\n        username = request.form.get(\"username\") ",
+        "peekOfCode": "auth_bp = Blueprint(\"auth\", __name__, template_folder=\"../templates\")\n# Instancias compartidas\nauth_repository = AuthRepositoryImpl()\npassword_hasher = PasswordHasher()\nlogin_use_case = LoginUser(auth_repository, password_hasher)\n@auth_bp.route(\"/login\", methods=[\"GET\", \"POST\"])\n@isLoginReady\ndef login():\n    errors = {}\n    form = {\"username\": \"\", \"contrasena\": \"\"}",
         "detail": "app.infrastructure.web.routes.auth_routes",
         "documentation": {}
     },
@@ -1810,7 +2103,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.auth_routes",
         "description": "app.infrastructure.web.routes.auth_routes",
-        "peekOfCode": "auth_repository = AuthRepositoryImpl()\npassword_hasher = PasswordHasher()\nlogin_use_case = LoginUser(auth_repository, password_hasher)\n@auth_bp.route(\"/login\", methods=[\"GET\", \"POST\"])\n@isLoginReady\ndef login():\n    if request.method == \"POST\":\n        username = request.form.get(\"username\") \n        password = request.form.get(\"password\")\n        try:",
+        "peekOfCode": "auth_repository = AuthRepositoryImpl()\npassword_hasher = PasswordHasher()\nlogin_use_case = LoginUser(auth_repository, password_hasher)\n@auth_bp.route(\"/login\", methods=[\"GET\", \"POST\"])\n@isLoginReady\ndef login():\n    errors = {}\n    form = {\"username\": \"\", \"contrasena\": \"\"}\n    if request.method == \"POST\":\n        # leer y normalizar",
         "detail": "app.infrastructure.web.routes.auth_routes",
         "documentation": {}
     },
@@ -1819,7 +2112,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.auth_routes",
         "description": "app.infrastructure.web.routes.auth_routes",
-        "peekOfCode": "password_hasher = PasswordHasher()\nlogin_use_case = LoginUser(auth_repository, password_hasher)\n@auth_bp.route(\"/login\", methods=[\"GET\", \"POST\"])\n@isLoginReady\ndef login():\n    if request.method == \"POST\":\n        username = request.form.get(\"username\") \n        password = request.form.get(\"password\")\n        try:\n            user = login_use_case.execute(username, password) ",
+        "peekOfCode": "password_hasher = PasswordHasher()\nlogin_use_case = LoginUser(auth_repository, password_hasher)\n@auth_bp.route(\"/login\", methods=[\"GET\", \"POST\"])\n@isLoginReady\ndef login():\n    errors = {}\n    form = {\"username\": \"\", \"contrasena\": \"\"}\n    if request.method == \"POST\":\n        # leer y normalizar\n        form[\"username\"] = (request.form.get(\"username\") or \"\").strip()",
         "detail": "app.infrastructure.web.routes.auth_routes",
         "documentation": {}
     },
@@ -1828,8 +2121,35 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.auth_routes",
         "description": "app.infrastructure.web.routes.auth_routes",
-        "peekOfCode": "login_use_case = LoginUser(auth_repository, password_hasher)\n@auth_bp.route(\"/login\", methods=[\"GET\", \"POST\"])\n@isLoginReady\ndef login():\n    if request.method == \"POST\":\n        username = request.form.get(\"username\") \n        password = request.form.get(\"password\")\n        try:\n            user = login_use_case.execute(username, password) \n            session[\"user_id\"] = user.usuario_id",
+        "peekOfCode": "login_use_case = LoginUser(auth_repository, password_hasher)\n@auth_bp.route(\"/login\", methods=[\"GET\", \"POST\"])\n@isLoginReady\ndef login():\n    errors = {}\n    form = {\"username\": \"\", \"contrasena\": \"\"}\n    if request.method == \"POST\":\n        # leer y normalizar\n        form[\"username\"] = (request.form.get(\"username\") or \"\").strip()\n        form[\"contrasena\"] = request.form.get(\"contrasena\") or \"\"",
         "detail": "app.infrastructure.web.routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard",
+        "kind": 2,
+        "importPath": "app.infrastructure.web.routes.dashboard_routes",
+        "description": "app.infrastructure.web.routes.dashboard_routes",
+        "peekOfCode": "def dashboard():\n    stats = _stats_repo.get_stats()\n    return render_template(\"dashboard.html\", stats=stats)",
+        "detail": "app.infrastructure.web.routes.dashboard_routes",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard_bp",
+        "kind": 5,
+        "importPath": "app.infrastructure.web.routes.dashboard_routes",
+        "description": "app.infrastructure.web.routes.dashboard_routes",
+        "peekOfCode": "dashboard_bp = Blueprint(\"dashboard\", __name__)  # ya lo tienes\n_stats_repo = DashboardStatsRepository()\n@dashboard_bp.route(\"/\", methods=[\"GET\"])\n@login_required\n@roles_required(ROLE_ADMIN)  # ambos roles lo pueden ver\ndef dashboard():\n    stats = _stats_repo.get_stats()\n    return render_template(\"dashboard.html\", stats=stats)",
+        "detail": "app.infrastructure.web.routes.dashboard_routes",
+        "documentation": {}
+    },
+    {
+        "label": "_stats_repo",
+        "kind": 5,
+        "importPath": "app.infrastructure.web.routes.dashboard_routes",
+        "description": "app.infrastructure.web.routes.dashboard_routes",
+        "peekOfCode": "_stats_repo = DashboardStatsRepository()\n@dashboard_bp.route(\"/\", methods=[\"GET\"])\n@login_required\n@roles_required(ROLE_ADMIN)  # ambos roles lo pueden ver\ndef dashboard():\n    stats = _stats_repo.get_stats()\n    return render_template(\"dashboard.html\", stats=stats)",
+        "detail": "app.infrastructure.web.routes.dashboard_routes",
         "documentation": {}
     },
     {
@@ -1846,7 +2166,7 @@
         "kind": 2,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "def aprobar(solicitud_id: int):\n    usuario_actual = session.get(\"username\")\n    mensaje = request.form.get(\"mensaje\", \"\").strip()\n    destinatario = request.form.get(\"destinatario\", \"\").strip()\n    image_data = request.form.get(\"image_data\")\n    try:\n        solicitud_service.aprobar(solicitud_id, usuario_actual)\n        if destinatario and mensaje:\n            send_email(\n                to=destinatario,",
+        "peekOfCode": "def aprobar(solicitud_id: int):\n    usuario_actual = session.get(\"username\")\n    mensaje = request.form.get(\"mensaje\", \"\").strip()\n    destinatario = request.form.get(\"destinatario\", \"\").strip()\n    try:\n        if destinatario and mensaje:\n            send_templated_email(\n                to=destinatario,\n                subject=\"Respuesta a su solicitud\",\n                context={",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1855,7 +2175,7 @@
         "kind": 2,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "def desaprobar(solicitud_id: int):\n    usuario_actual = session.get(\"username\")\n    mensaje = request.form.get(\"mensaje\", \"\").strip()\n    destinatario = request.form.get(\"destinatario\", \"\").strip()\n    image_data = request.form.get(\"image_data\")\n    try:\n        # 1) Actualiza estado en BD\n        solicitud_service.desaprobar(solicitud_id, usuario_actual)\n        # 2) Envía email si hay destinatario y mensaje\n        if destinatario and mensaje:",
+        "peekOfCode": "def desaprobar(solicitud_id: int):\n    usuario_actual = session.get(\"username\")\n    mensaje = request.form.get(\"mensaje\", \"\").strip()\n    destinatario = request.form.get(\"destinatario\", \"\").strip()\n    try:\n        # 1) Envía email si hay destinatario y mensaje\n        if destinatario and mensaje:\n            send_templated_email(\n                to=destinatario,\n                subject=\"Respuesta a su solicitud\",",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1864,7 +2184,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "solicitudes_bp = Blueprint(\"solicitudes\", __name__)\nrepo = SolicitudRepositoryImpl()\nsolicitud_service = SolicitudService(repo)\nrespuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")",
+        "peekOfCode": "solicitudes_bp = Blueprint(\"solicitudes\", __name__)\nrepo = SolicitudRepositoryImpl()\nsolicitud_service = SolicitudService(repo)\nrespuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\n@roles_required(ROLE_ADMIN,ROLE_NORMAL)\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1873,7 +2193,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "repo = SolicitudRepositoryImpl()\nsolicitud_service = SolicitudService(repo)\nrespuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")",
+        "peekOfCode": "repo = SolicitudRepositoryImpl()\nsolicitud_service = SolicitudService(repo)\nrespuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\n@roles_required(ROLE_ADMIN,ROLE_NORMAL)\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1882,7 +2202,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "solicitud_service = SolicitudService(repo)\nrespuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    atendidos = request.args.get(\"atendidos\")",
+        "peekOfCode": "solicitud_service = SolicitudService(repo)\nrespuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\n@roles_required(ROLE_ADMIN,ROLE_NORMAL)\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1891,7 +2211,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "respuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    atendidos = request.args.get(\"atendidos\")\n    page = int(request.args.get(\"page\", 1))",
+        "peekOfCode": "respuesta_repo = RespuestaSolicitudRepositoryImpl()\nrespuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\n@roles_required(ROLE_ADMIN,ROLE_NORMAL)\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    atendidos = request.args.get(\"atendidos\")",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1900,7 +2220,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.solicitud_routes",
         "description": "app.infrastructure.web.routes.solicitud_routes",
-        "peekOfCode": "respuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    atendidos = request.args.get(\"atendidos\")\n    page = int(request.args.get(\"page\", 1))\n    per_page = int(request.args.get(\"per_page\", 10)) ",
+        "peekOfCode": "respuesta_service = RespuestaSolicitudService(respuesta_repo)\n@solicitudes_bp.route(\"/solicitudes\", methods=[\"GET\"])\n@login_required\n@roles_required(ROLE_ADMIN,ROLE_NORMAL)\ndef listar_solicitudes():\n    nombre = request.args.get(\"nombre\")\n    fecha_inicio_str = request.args.get(\"fecha_inicio\")\n    fecha_fin_str = request.args.get(\"fecha_fin\")\n    atendidos = request.args.get(\"atendidos\")\n    page = int(request.args.get(\"page\", 1))",
         "detail": "app.infrastructure.web.routes.solicitud_routes",
         "documentation": {}
     },
@@ -1909,7 +2229,16 @@
         "kind": 2,
         "importPath": "app.infrastructure.web.routes.user_routes",
         "description": "app.infrastructure.web.routes.user_routes",
-        "peekOfCode": "def user_create():\n    if request.method == \"POST\":\n        nombres = request.form.get(\"nombres\")\n        ap_paterno = request.form.get(\"ap_paterno\")\n        ap_materno = request.form.get(\"ap_materno\")\n        usuario = request.form.get(\"usuario\")\n        contrasena = request.form.get(\"contrasena\")\n        repetir_contrasena = request.form.get(\"repetir_contrasena\")\n        tipo_usuario_id = int(request.form.get(\"tipo_usuario\"))\n        # validacion de la contraseña",
+        "peekOfCode": "def user_create():\n    errors = {}\n    # valores por defecto para repoblar el form\n    form = {\n        \"nombres\": \"\",\n        \"ap_paterno\": \"\",\n        \"ap_materno\": \"\",\n        \"usuario\": \"\",\n        \"tipo_usuario\": \"\",\n    }",
+        "detail": "app.infrastructure.web.routes.user_routes",
+        "documentation": {}
+    },
+    {
+        "label": "change_password",
+        "kind": 2,
+        "importPath": "app.infrastructure.web.routes.user_routes",
+        "description": "app.infrastructure.web.routes.user_routes",
+        "peekOfCode": "def change_password():\n    errors = {}\n    if request.method == \"POST\":\n        current_password = (request.form.get(\"current_password\") or \"\").strip()\n        new_password = (request.form.get(\"new_password\") or \"\").strip()\n        confirm_password = (request.form.get(\"confirm_password\") or \"\").strip()\n        # Validaciones simples\n        if not current_password:\n            errors[\"current_password\"] = \"Ingresa tu contraseña actual.\"\n        if not new_password:",
         "detail": "app.infrastructure.web.routes.user_routes",
         "documentation": {}
     },
@@ -1918,7 +2247,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.user_routes",
         "description": "app.infrastructure.web.routes.user_routes",
-        "peekOfCode": "user_bp = Blueprint(\"user\", import_name=__name__, template_folder=\"../templates\")\n# Instancias compartidas\npassword_hasher = PasswordHasher()\ntipo_usuario_repository = TipoUsuarioRepositoryImpl()\nuser_repository = UserRepositoryImpl()\nlistar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\ndef user_create():",
+        "peekOfCode": "user_bp = Blueprint(\"user\", import_name=__name__, template_folder=\"../templates\")\n# Instancias compartidas\npassword_hasher = PasswordHasher()\ntipo_usuario_repository = TipoUsuarioRepositoryImpl()\nuser_repository = UserRepositoryImpl()\nlistar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\n@roles_required(ROLE_ADMIN)",
         "detail": "app.infrastructure.web.routes.user_routes",
         "documentation": {}
     },
@@ -1927,7 +2256,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.user_routes",
         "description": "app.infrastructure.web.routes.user_routes",
-        "peekOfCode": "password_hasher = PasswordHasher()\ntipo_usuario_repository = TipoUsuarioRepositoryImpl()\nuser_repository = UserRepositoryImpl()\nlistar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\ndef user_create():\n    if request.method == \"POST\":\n        nombres = request.form.get(\"nombres\")",
+        "peekOfCode": "password_hasher = PasswordHasher()\ntipo_usuario_repository = TipoUsuarioRepositoryImpl()\nuser_repository = UserRepositoryImpl()\nlistar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\n@roles_required(ROLE_ADMIN)\ndef user_create():\n    errors = {}",
         "detail": "app.infrastructure.web.routes.user_routes",
         "documentation": {}
     },
@@ -1936,7 +2265,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.user_routes",
         "description": "app.infrastructure.web.routes.user_routes",
-        "peekOfCode": "tipo_usuario_repository = TipoUsuarioRepositoryImpl()\nuser_repository = UserRepositoryImpl()\nlistar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\ndef user_create():\n    if request.method == \"POST\":\n        nombres = request.form.get(\"nombres\")\n        ap_paterno = request.form.get(\"ap_paterno\")",
+        "peekOfCode": "tipo_usuario_repository = TipoUsuarioRepositoryImpl()\nuser_repository = UserRepositoryImpl()\nlistar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\n@roles_required(ROLE_ADMIN)\ndef user_create():\n    errors = {}\n    # valores por defecto para repoblar el form",
         "detail": "app.infrastructure.web.routes.user_routes",
         "documentation": {}
     },
@@ -1945,7 +2274,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.user_routes",
         "description": "app.infrastructure.web.routes.user_routes",
-        "peekOfCode": "user_repository = UserRepositoryImpl()\nlistar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\ndef user_create():\n    if request.method == \"POST\":\n        nombres = request.form.get(\"nombres\")\n        ap_paterno = request.form.get(\"ap_paterno\")\n        ap_materno = request.form.get(\"ap_materno\")",
+        "peekOfCode": "user_repository = UserRepositoryImpl()\nlistar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\n@roles_required(ROLE_ADMIN)\ndef user_create():\n    errors = {}\n    # valores por defecto para repoblar el form\n    form = {",
         "detail": "app.infrastructure.web.routes.user_routes",
         "documentation": {}
     },
@@ -1954,7 +2283,7 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.user_routes",
         "description": "app.infrastructure.web.routes.user_routes",
-        "peekOfCode": "listar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\ndef user_create():\n    if request.method == \"POST\":\n        nombres = request.form.get(\"nombres\")\n        ap_paterno = request.form.get(\"ap_paterno\")\n        ap_materno = request.form.get(\"ap_materno\")\n        usuario = request.form.get(\"usuario\")",
+        "peekOfCode": "listar_tipos_usuario = TypeUserServices(tipo_usuario_repository)\nuser_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\n@roles_required(ROLE_ADMIN)\ndef user_create():\n    errors = {}\n    # valores por defecto para repoblar el form\n    form = {\n        \"nombres\": \"\",",
         "detail": "app.infrastructure.web.routes.user_routes",
         "documentation": {}
     },
@@ -1963,8 +2292,26 @@
         "kind": 5,
         "importPath": "app.infrastructure.web.routes.user_routes",
         "description": "app.infrastructure.web.routes.user_routes",
-        "peekOfCode": "user_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\ndef user_create():\n    if request.method == \"POST\":\n        nombres = request.form.get(\"nombres\")\n        ap_paterno = request.form.get(\"ap_paterno\")\n        ap_materno = request.form.get(\"ap_materno\")\n        usuario = request.form.get(\"usuario\")\n        contrasena = request.form.get(\"contrasena\")",
+        "peekOfCode": "user_services = UserServices(user_repository, password_hasher)\n@user_bp.route(\"/user\", methods=[\"GET\", \"POST\"])\n@login_required\n@roles_required(ROLE_ADMIN)\ndef user_create():\n    errors = {}\n    # valores por defecto para repoblar el form\n    form = {\n        \"nombres\": \"\",\n        \"ap_paterno\": \"\",",
         "detail": "app.infrastructure.web.routes.user_routes",
+        "documentation": {}
+    },
+    {
+        "label": "inject_role_helpers",
+        "kind": 2,
+        "importPath": "app.web.context",
+        "description": "app.web.context",
+        "peekOfCode": "def inject_role_helpers():\n    \"\"\"\n    Variables disponibles en Jinja:\n      - current_role\n      - ROLE_ADMIN / ROLE_NORMAL\n      - has_role(*roles)\n    \"\"\"\n    def has_role(*roles):\n        return _has_role(session, *roles)\n    return {",
+        "detail": "app.web.context",
+        "documentation": {}
+    },
+    {
+        "label": "register_session_sanitizer",
+        "kind": 2,
+        "importPath": "app.web.middleware",
+        "description": "app.web.middleware",
+        "peekOfCode": "def register_session_sanitizer(app):\n    @app.before_request\n    def _try_load_session():\n        \"\"\"Si la cookie de sesión está corrupta, limpia la sesión SIN redirigir.\"\"\"\n        try:\n            _ = session.get(\"user_id\", None)  # fuerza verificación\n        except (BadSignature, BadTimeSignature):\n            g._bad_session = True\n            session.clear()\n    @app.after_request",
+        "detail": "app.web.middleware",
         "documentation": {}
     },
     {
@@ -1972,16 +2319,16 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app = Flask(__name__)\nCORS(app)\napp.secret_key = \"123456789\"\n# Config Flask-Mail\napp.config.update(\n    MAIL_SERVER=settings.SMTP_HOST,\n    MAIL_PORT=settings.SMTP_PORT,\n    MAIL_USE_TLS=settings.SMTP_USE_TLS,\n    MAIL_USERNAME=settings.SMTP_USER,\n    MAIL_PASSWORD=settings.SMTP_PASS,",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\napp.config['SECRET_KEY'] = settings.SECRET_KEY\n # Context processor (variables para todas las plantillas)\napp.context_processor(inject_role_helpers)\n# Middleware (saneado de cookie)\nregister_session_sanitizer(app)\n# Config Flask-Mail\napp.config.update(\n    MAIL_SERVER=settings.SMTP_HOST,",
         "detail": "app",
         "documentation": {}
     },
     {
-        "label": "app.secret_key",
+        "label": "app.config['SECRET_KEY']",
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app.secret_key = \"123456789\"\n# Config Flask-Mail\napp.config.update(\n    MAIL_SERVER=settings.SMTP_HOST,\n    MAIL_PORT=settings.SMTP_PORT,\n    MAIL_USE_TLS=settings.SMTP_USE_TLS,\n    MAIL_USERNAME=settings.SMTP_USER,\n    MAIL_PASSWORD=settings.SMTP_PASS,\n    MAIL_DEFAULT_SENDER=settings.SMTP_FROM,\n)",
+        "peekOfCode": "app.config['SECRET_KEY'] = settings.SECRET_KEY\n # Context processor (variables para todas las plantillas)\napp.context_processor(inject_role_helpers)\n# Middleware (saneado de cookie)\nregister_session_sanitizer(app)\n# Config Flask-Mail\napp.config.update(\n    MAIL_SERVER=settings.SMTP_HOST,\n    MAIL_PORT=settings.SMTP_PORT,\n    MAIL_USE_TLS=settings.SMTP_USE_TLS,",
         "detail": "app",
         "documentation": {}
     }

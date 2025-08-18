@@ -8,7 +8,7 @@ block content %}
     Solicitudes de Citas Médicas
   </h1>
 
-  <form method="get" class="mb-4 flex justify-between items-center gap-2 w-full">
+  <form method="get" class="mb-4 flex justify-between items-center gap-2 w-full" novalidate>
     <div class="flex gap-4">
       {{ input.input_field('nombre', type='text', placeholder='nombre del paciente',label='Buscar por nombre') }}
       {{ input.input_field('fecha_inicio', type='date',label='Fecha de Inicio') }}
@@ -526,6 +526,60 @@ const modal = document.getElementById(`modal-reject-${id}`);
   });
 
 
+
+   // Quita errores previos dentro de un contenedor
+  function clearPhErrors(scope) {
+    scope.querySelectorAll('.ph-error').forEach(n => n.remove());
+  }
+
+  // Muestra error debajo del input
+  function markPhError(inp, msg) {
+    const hint = document.createElement('div');
+    hint.className = 'ph-error text-danger text-xs mt-1';
+    hint.textContent = msg;
+    (inp.parentElement || inp).appendChild(hint);
+  }
+
+  // Valida placeholders SOLO en modales de rechazo
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('div[id^="modal-reject-"]').forEach(modal => {
+      const form = modal.querySelector('form');        // el <form> del modal
+      const phBox = modal.querySelector('[id^="placeholders-reject-"]'); // contenedor de placeholders
+
+      if (!form || !phBox) return;
+
+      // limpiar mensajes al tipear
+      phBox.addEventListener('input', e => {
+        if (e.target.matches('input[data-key]')) {
+          const err = (e.target.parentElement || e.target).querySelector('.ph-error');
+          if (err) err.remove();
+        }
+      });
+
+      form.addEventListener('submit', e => {
+        clearPhErrors(phBox);
+
+        // si no hay placeholders generados, no validamos nada
+        const inputs = phBox.querySelectorAll('input[data-key]');
+        if (!inputs.length) return;
+
+        let ok = true, firstBad = null;
+        inputs.forEach(inp => {
+          if (!inp.value.trim()) {
+            ok = false;
+            if (!firstBad) firstBad = inp;
+            markPhError(inp, 'Este campo es obligatorio.');
+          }
+        });
+
+        if (!ok) {
+          e.preventDefault();
+          firstBad.focus();
+          firstBad.scrollIntoView({behavior: 'smooth', block: 'center'});
+        }
+      });
+    });
+  });
 
 </script>
 

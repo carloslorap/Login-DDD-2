@@ -8,15 +8,16 @@ from app.infrastructure.repositories.solicitud.solicitud_repository_impl import 
 from app.application.solicitud.solicitud_services import SolicitudService
 
 # decoradores
-from app.decorators.protection import login_required
+from app.decorators.protection import login_required, roles_required
 from app.infrastructure.repositories.solicitud.respuesta_solicitud_repository_impl import (
     RespuestaSolicitudRepositoryImpl,
 )
 from app.application.solicitud.respuesta_solicitud_service import (
     RespuestaSolicitudService,
 )
-# from app.infrastructure.email.mailer import send_email
+from app.core.roles import ROLE_ADMIN, ROLE_NORMAL
 
+# from app.infrastructure.email.mailer import send_email
 solicitudes_bp = Blueprint("solicitudes", __name__)
 
 repo = SolicitudRepositoryImpl()
@@ -26,8 +27,11 @@ respuesta_repo = RespuestaSolicitudRepositoryImpl()
 respuesta_service = RespuestaSolicitudService(respuesta_repo)
 
 
+
+
 @solicitudes_bp.route("/solicitudes", methods=["GET"])
 @login_required
+@roles_required(ROLE_ADMIN,ROLE_NORMAL)
 def listar_solicitudes():
 
     nombre = request.args.get("nombre")
@@ -79,7 +83,6 @@ def aprobar(solicitud_id: int):
     mensaje = request.form.get("mensaje", "").strip()
     destinatario = request.form.get("destinatario", "").strip()
     try:
-        solicitud_service.aprobar(solicitud_id, usuario_actual)
         
         if destinatario and mensaje:
             send_templated_email(
@@ -96,9 +99,11 @@ def aprobar(solicitud_id: int):
                 image_data_url=request.form.get("image_data") or None,  # si vino imagen desde el modal
                 image_cid="adj-1"
             )
-        flash("Solicitud aprobada y correo enviado.", "success")
+            solicitud_service.aprobar(solicitud_id, usuario_actual)
+            flash("Solicitud aprobada y correo enviado.", "success")
+        else:
+            flash("debes enviar un mensaje","danger")
     except Exception as e:
-        print(e)
         flash(f"Error al aprobar: {e}", "danger")
     return redirect(url_for("solicitudes.listar_solicitudes"))
 
@@ -111,10 +116,8 @@ def desaprobar(solicitud_id: int):
     destinatario = request.form.get("destinatario", "").strip()
 
     try:
-        # 1) Actualiza estado en BD
-        solicitud_service.desaprobar(solicitud_id, usuario_actual)
         
-        # 2) Envía email si hay destinatario y mensaje
+        # 1) Envía email si hay destinatario y mensaje
         if destinatario and mensaje:
             send_templated_email(
                 to=destinatario,
@@ -130,7 +133,11 @@ def desaprobar(solicitud_id: int):
                 image_data_url=request.form.get("image_data") or None,  # si vino imagen desde el modal
                 image_cid="adj-1"
             )
-        flash("Solicitud desaprobada y correo enviado.", "success")
+            # 2 ) Actualiza estado en BD
+            solicitud_service.desaprobar(solicitud_id, usuario_actual)
+            flash("Solicitud desaprobada y correo enviado.", "success")
+        else:
+            flash("debes enviar un mensaje","danger")
     except Exception as e:
         flash(f"Error al desaprobar/enviar correo: {e}", "danger")
 

@@ -1,0 +1,16 @@
+
+{% macro nav_item(href, icon, label) %}
+  {% set is_active = (request.path == href) if href == '/' else request.path.startswith(href) %}
+
+  <li class="flex justify-start items-center pl-5 transition-all duration-100 ease-in-out rounded-md cursor-pointer
+             {{ 'border-l-6 bg-primary-hover' if is_active else 'hover:border-l-6' }} border-primary-200">
+    <span class="material-symbols-outlined {{ 'text-primary-200' if is_active else 'text-gray-dark' }}">
+      {{ icon }}
+    </span>
+    <a href="{{ href }}"
+       class="block p-2 ml-1 rounded mt-1 font-bold text-sm
+              {{ 'text-primary-200' if is_active else 'text-dark-500 hover:text-primary-200' }}">
+      {{ label }}   
+    </a>
+  </li> 
+{% endmacro %}

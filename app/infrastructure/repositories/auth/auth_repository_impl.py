@@ -10,9 +10,13 @@ class AuthRepositoryImpl(AuthRepository):
             user_row = db.query(Usuario).filter(Usuario.usuario == username).first()
             if user_row:
                 return Auth(
+                    nombres = user_row.nombres,
+                    ap_materno=user_row.ap_materno,
+                    ap_paterno=user_row.ap_paterno,
                     usuario_id=user_row.usuario_id,
                     usuario=user_row.usuario,
                     contrasena=user_row.contrasena,
+                    tipo_usuario_id=user_row.tipo_usuario_id,
                 )
             return None
         

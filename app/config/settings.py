@@ -11,5 +11,6 @@ class Settings:
     SMTP_PASS = os.getenv("SMTP_PASS", "")
     SMTP_FROM = os.getenv("SMTP_FROM", SMTP_USER)
     SMTP_USE_TLS = os.getenv("SMTP_USE_TLS", "true").lower() == "true"
+    SECRET_KEY = os.getenv("SECRET_KEY")
 
 settings = Settings()

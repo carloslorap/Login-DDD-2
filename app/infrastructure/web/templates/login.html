@@ -1,4 +1,5 @@
 {% import 'components/input.html' as input %}
+{% import 'components/button.html' as buttton %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,12 +7,20 @@
     <meta charset="UTF-8">
     <title>login</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}" />
+     <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
 </head>
 
 <body>
     <div class="flex min-h-screen">
         <!-- left -->
-        <div class="w-full flex flex-col justify-center items-center bg-blue-300 text-white">
+        <div class="w-full flex flex-col justify-center items-center bg-primary-300 text-ligth-500">
             <div class="text-center">
                 <h2 class="text-3xl">Sistema de Chatbot Médico</h2>
                 <p>Gestión i012.nteligente de citas médicas a través de conversaciones automatizadas</p>
@@ -30,20 +39,53 @@
         <div class="flex flex-col justify-center items-center w-full">
 
             <div class="text-center mb-8">
-                <h1 class="text-2xl font-semibold">Iniciar Sesión</h1>
-                <p>Accede a tu panel de administración</p>
+                <h1 class="text-2xl font-semibold text-dark-500">Iniciar Sesión</h1>
+                <p class="text-gray-dark">Accede a tu panel de administración</p>
             </div>
-            <form method="POST" action="/login" class="space-y-4 w-96 flex flex-col">
+            <form method="POST" action="/login" class="space-y-4 w-96 flex flex-col" novalidate>
 
-                {{ input.input_field('username', type='text', placeholder='Escribe tu usuario',label='Usuario') }}
+                {{ input.input_field('username', type='text', placeholder='Escribe tu usuario',label='Usuario',error=errors.get('username')) }}
 
-                {{ input.input_field('password', type='password', placeholder='Escribe tu contraseña',label='Contraseña') }}
+                {{ input.input_field('contrasena', type='password', placeholder='Escribe tu contraseña',label='Contraseña',error=errors.get('contrasena')) }}
 
-                <button type="submit" class="p-2.5 rounded-lg bg-blue-300 text-white">Ingresar</button>
+                  {{ buttton.button_field('Ingresar') }}
             </form>
 
         </div>
     </div>
+
+       <!-- Toastify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <script>
+      window.FLASH_MESSAGES = {{ messages | tojson }};
+    </script>
+    {% endwith %}
+
+    <script>
+      const colors = {
+        success: "#22C5AD", // verde
+        danger: "#EF4D56", // rojo
+        error: "#EF4D56", // rojo
+        warning: "#ca8a04", // amarillo
+        info: "#2563eb", // azul
+      };
+
+      (function renderFlashes() {
+        (window.FLASH_MESSAGES || []).forEach(([category, msg]) => {
+          Toastify({
+            text: msg,
+            duration: 4000,
+            close: true,
+            gravity: "top", 
+            position: "right",
+            stopOnFocus: true,
+            style: { background: colors[category] || colors.danger },
+          }).showToast();
+        });
+      })();
+    </script>
 </body>
 
 </html>

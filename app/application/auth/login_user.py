@@ -1,5 +1,6 @@
 from app.domain.auth.auth_repository import AuthRepository
 from app.infrastructure.auth.password_hasher import PasswordHasher
+from flask import flash
 
 class LoginUser:
     def __init__(self, user_repository: AuthRepository, password_hasher: PasswordHasher):

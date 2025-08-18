@@ -1,63 +1,32 @@
-<aside class="fixed w-60 left-0 flex flex-col bg-ligth-500 h-screen p-4 shadow-md justify-between">
-  <ul class="space-y-5 ">
+{% from "components/itemNav.html" import nav_item %}
 
+<aside class="fixed w-60 left-0 flex flex-col bg-ligth-500 h-screen p-4 shadow-md justify-between">
+  <ul class="space-y-5">
     <div class="border p-5">
       <h1 class="font-extrabold">Logo</h1>
     </div>
 
-    <li
-      class="flex justify-start items-center pl-5 transition-all duration-100 ease-in-out hover:border-l-6 border-primary-200 rounded-md cursor-pointer">
+    {# Visible para todos / ADMIN #}
+    {% if has_role(ROLE_ADMIN) %}
+      {{ nav_item('/', 'browse_activity', 'Dashboard') }}
+      {{ nav_item('/user', 'person_add', 'Crear Usuario') }}
+    {% endif %}
 
-      <span class="material-symbols-outlined text-gray-dark">
-        browse_activity
-      </span>
-      <a href="/" class="block p-2 ml-2 rounded mt-1 text-dark-500 hover:text-primary-200 font-bold text-sm ">
+    {% if has_role(ROLE_ADMIN, ROLE_NORMAL) %}
+      {{ nav_item('/solicitudes', 'clinical_notes', 'Solicitudes') }}
+    {% endif %}
 
-        Dashboard</a>
-    </li>
-    <li
-      class="flex justify-start items-center pl-5  transition-all duration-100 ease-in-out hover:border-l-6 border-primary-200 rounded-md cursor-pointer">
-      <span class="material-symbols-outlined text-gray-dark">
-        person_add
-      </span>
-      <a href="/user" class="block p-2 ml-2 rounded mt-1 text-dark-500 hover:text-primary-200 font-bold text-sm">
-
-        Crear Usuario</a>
-    </li>
-
-    <li
-      class="flex justify-start items-center pl-5  transition-all duration-100 ease-in-out hover:border-l-6 border-primary-200 rounded-md cursor-pointer">
-      <span class="material-symbols-outlined text-gray-dark">
-        clinical_notes
-      </span>
-
-      <a href="/solicitudes" class="block p-2 rounded mt-1 text-dark-500 hover:text-primary-200 font-bold text-sm">
-
-        Solicitudes</a>
-    </li>
-
-    <li
-      class="flex justify-start items-center pl-5  transition-all duration-100 ease-in-out hover:border-l-6 border-primary-200 rounded-md cursor-pointer">
-      <span class="material-symbols-outlined text-gray-dark">
-        clinical_notes
-      </span>
-
-      <a href="/change-password" class="block p-2 rounded mt-1 text-dark-500 hover:text-primary-200 font-bold text-sm">
-
-        Cambiar contraseña</a>
-    </li>
+    {# Visible para todos #}
+    {{ nav_item('/change-password', 'lock_reset', 'Cambiar contraseña') }}
   </ul>
 
+  <!-- Footer -->
   <div>
-    <div
-      class="flex justify-start items-center pl-5 transition-all duration-100 ease-in-out border-l-6 border-primary-200 bg-primary-hover rounded-md">
-      <span class="material-symbols-outlined text-primary-200">
-        logout
-      </span>
-      <a href="/logout"
-        class="block hover:bg-primary-hover px-2 py-3 ml-2 rounded mt-1 text-dark-500 font-semibold text-sm">
-
-        Cerrar sesion</a>
+    <div class="flex justify-start items-center pl-5 transition-all duration-100 ease-in-out border-l-6 border-primary-200 bg-primary-hover rounded-md">
+      <span class="material-symbols-outlined text-primary-200">logout</span>
+      <a href="/logout" class="block hover:bg-primary-hover px-2 py-3 ml-2 rounded mt-1 text-dark-500 font-semibold text-sm">
+        Cerrar sesión
+      </a>
     </div>
   </div>
 </aside>

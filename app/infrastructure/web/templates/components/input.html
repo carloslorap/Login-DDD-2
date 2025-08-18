@@ -1,12 +1,52 @@
-{% macro input_field(name, type='text', value='', placeholder='',label='') %}
-  <div>
-    <label class="block mb-1 text-gray-dark font-medium">{{ label }}</label>
+{% macro input_field(name, type='text', value='', placeholder='',label='',
+error=None) %} {% set is_password = (type == 'password') %}
+<div>
+  <label for="{{ name }}" class="block mb-1 text-gray-dark font-medium"
+    >{{ label }}</label
+  >
+  <div class="relative">
     <input
-    type="{{ type }}"
-    name="{{ name }}"
-    value="{{ value }}"
-    placeholder="{{ placeholder }}"
-    class="border-1 border-gray-400 focus:outline-none w-full p-2 rounded-lg placeholder:text-gray-400 placeholder:text-sm"
-  />
+      id="{{ name }}"
+      type="{{ type }}"
+      name="{{ name }}"
+      value="{{ value }}"
+      placeholder="{{ placeholder }}"
+      class="border-1 border-gray-400 focus:outline-none w-full p-2 rounded-lg placeholder:text-gray-400 placeholder:text-sm {% if is_password %}pr-10{% endif %}"
+      required
+    />
+
+    {% if is_password %}
+    <button
+      type="button"
+      onclick="togglePassword('{{ name }}')"
+      class="absolute inset-y-0 right-2 flex items-center px-3 text-gray-500 hover:text-gray-700"
+    >
+      <span class="material-symbols-outlined text-lg" id="{{ name }}-icon"
+        >visibility</span
+      >
+    </button>
+    {% endif %}
   </div>
+
+  {% if error %}
+  <p id="{{ name }}-error" class="mt-1 text-sm" style="color: #ef4d56">
+    {{ error }}
+  </p>
+  {% endif %}
+</div>
+
+<script>
+  function togglePassword(id) {
+    const input = document.getElementById(id);
+    const icon = document.getElementById(id + "-icon");
+    if (input.type === "password") {
+      input.type = "text";
+      icon.textContent = "visibility_off"; //ojito tachado
+    } else {
+      input.type = "password";
+      icon.textContent = "visibility"; //ojito normal
+    }
+  }
+</script>
+
 {% endmacro %}

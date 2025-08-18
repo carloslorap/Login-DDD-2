@@ -43,7 +43,22 @@ class UserServices:
             contrasena=hashed_password,
             tipo_usuario_id=tipo_usuario_id
         )
-        print("Entrando a UserServices.create_user")
         return self.user_repository.create_user(nuevo_usuario)
+    
+    def change_password(self, user_id: int, current_password: str, new_password: str) -> None:
+        user = self.user_repository.get_by_id(user_id)
+        if not user:
+            raise ValueError("Usuario no encontrado.")
+
+        # validar contraseña actual contra el hash
+        if not self.password_hasher.verify(current_password, user.contrasena):
+            raise ValueError("La contraseña actual es incorrecta.")
+
+        # longitud minima
+        if len(new_password) < 6:
+            raise ValueError("La nueva contraseña debe tener al menos 6 caracteres.")
+
+        new_hash = self.password_hasher.hash(new_password)
+        self.user_repository.update_password(user_id, new_hash)
         
 
